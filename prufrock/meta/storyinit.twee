@@ -1,0 +1,10 @@
+:: StoryInit [nobr]
+/* to rewind within a place */
+<<set $reversePassages = []>>
+/* to do total rewind at the end */
+<<set $totalReversePassages = ['Start']>>
+<<set $reverse = false>>
+<<set $places = {"city": false, "cat": false, "room": false, "tea": false, "hamlet": false, "beach": false, "ocean": false}>>
+
+/* city variables */
+<<set $twoMen = true>>

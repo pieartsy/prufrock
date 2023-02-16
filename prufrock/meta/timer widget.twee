@@ -1,0 +1,46 @@
+:: timer [widget nobr]
+/* by HiEv */
+/* <<countdownTimer>> Widget - Start */
+<<widget "countdownTimer">>
+	<<set _seconds = $args[0]>>
+	<<set _minutes = Math.floor(_seconds / 60)>>
+	<<set _replacementPassage = $args[1]>>
+	<div id="timer" class="timer">_minutes:<<= (_seconds - (_minutes * 60)).toString().padStart(2, '0')>></div><<script>>
+	if (!recall("countdown", undefined)) {
+		setup.countdown = { startTime: new Date(), lastStr: "", passage: passage() };
+		memorize("countdown", setup.countdown);
+	} else {
+		setup.countdown = recall("countdown");
+		if (setup.countdown.passage !== passage()) {
+			setup.countdown = { startTime: new Date(), lastStr: "", passage: passage() };
+			memorize("countdown", setup.countdown);
+		}
+	}
+	setup.countdown.intervalID = setInterval(function () {
+		if (setup.countdown.passage !== passage()) {
+			clearInterval(setup.countdown.intervalID);
+			forget("countdown");
+			setup.countdown.passage = "";
+		} else {
+			var curtime = new Date(), str, seconds = State.temporary.seconds;
+			var diff = Math.floor(seconds - ((curtime - setup.countdown.startTime) / 1000)), min = Math.floor(diff / 60);
+			if ((diff >= 0) && (diff < seconds)) {
+				if ($("#timer").length) {
+					str = min + ":" + (diff - (min * 60)).toString().padStart(2, '0');
+					if (str != setup.countdown.lastStr) {
+						$("#timer").empty().wiki(str);
+						setup.countdown.lastStr = str;
+					}
+				}
+			}
+			if (diff < 0) {
+				clearInterval(setup.countdown.intervalID);
+				forget("countdown");
+				$("#passages div.passage").empty().wiki('<<include "' + State.temporary.replacementPassage + '">>');
+				delete setup.countdown.passage;
+			}
+		}
+	}, 200);
+	<</script>>
+<</widget>>
+/* <<countdownTimer>> Widget - End */

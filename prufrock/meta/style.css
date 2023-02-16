@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@0;1&display=swap');
+
+html {
+    font-family: 'Gentium Book Plus', 'Garamond', 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+html a {
+    font-weight: bolder;
+}
+
+#passages {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 40em;
+    height: 50vh;
+}
+
+.passage {
+    position: relative;
+    margin: auto;
+}
+
+/* delayed text */
+.delayed {
+    opacity: 0;
+}
+
+/* stop listening to dialogue */
+.stop {
+    position: relative;
+    bottom: 0;
+}
+
+/* start passage */
+body.start {
+    background-color: rgb(251, 245, 239);
+    color: rgb(16, 8, 8);
+}
+
+.passage.start {
+    text-align: right;
+    margin: auto;
+}
+
+.passage.start a {
+    color: rgb(189, 11, 11);
+}
+
+body.city,
+body.citystart {
+    background-color: rgb(52, 33, 52);
+    color: rgb(255, 255, 215);
+}
+
+body.citystart .timer,
+body.city .timer {
+    color:hsla(60, 100%, 92%, 0.25)
+}
+
+.passage.city a,
+.passage.citystart a {
+    color: yellow;
+}

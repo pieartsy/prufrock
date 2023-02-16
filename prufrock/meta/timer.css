@@ -1,0 +1,21 @@
+/* Timer - Start */
+/*
+	Makes sure that elements stay within the page width - scrollbar width.
+*/
+html, body {
+	width: -webkit-calc(100vw - 16px);
+	width: -moz-calc(100vw - 16px);
+	width: calc(100vw - 16px);
+	min-height: 100%;
+}
+#timer {
+	position: fixed;
+	right: 40px;
+	line-height: 1.55;
+    font-size: 50vh;
+	padding: 0 14px;
+	z-index: -20;
+	bottom: 0;
+}
+
+/* Timer - End */

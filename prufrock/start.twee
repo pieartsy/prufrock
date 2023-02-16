@@ -1,0 +1,66 @@
+:: Start [start notimer]
+Let me reverse the clocks, the hours ''in''
+which I die a million times and ''a''
+million ways in a single ''minute'',
+  
+standing stiff as rigor mortis ''there''
+in the corner where no one ''is''
+watching, watching for every ''time''
+  
+they laugh and turn away ''for''
+I can't help but calculate ''decisions''
+like a survivor, shipwrecked ''and''
+
+stranded in a sea of ''revisions''
+of choices never made ''which''
+haunt me nonetheless, ''a''
+
+coffin where even a ''minute''
+mistake can lead to ends that ''will''
+undo me. Let me do them in\
+<<nobr>>
+<<set $reverse = false>>
+<<if $places.city == false>>
+    [[reverse | city]]
+<<elseif $places.cat == false>>
+    [[reverse | cat]]
+<<elseif $places.room == false>>
+    [[reverse | room]]
+<<elseif $places.tea == false>>
+    [[reverse | tea]]
+<<elseif $places.hamlet == false>>
+    [[reverse | hamlet]]
+<<elseif $places.beach == false>>
+    [[reverse | beach]]
+<<elseif $places.ocean == false>>
+    [[reverse | ocean]]
+<</if>>.
+<</nobr>>
+
+:: reverse [notimer nobr]
+<<silently>>
+<<run forget("countdown")>>
+<<set $reverse = true>>
+<<if $places.city == false>>
+    <<set $places.city = true>>
+<<elseif $places.cat == false>>
+    <<set $places.cat = true>>
+<<elseif $places.room == false>>
+    <<set $places.room = true>>
+<<elseif $places.tea == false>>
+    <<set $places.tea = true>>
+<<elseif $places.hamlet == false>>
+    <<set $places.hamlet = true>>
+<<elseif $places.beach == false>>
+    <<set $places.beach = true>>
+<<elseif $places.ocean == false>>
+    <<set $places.ocean = true>>
+<</if>><</silently>>
+@@#reverse;<<link "Reverse." `passage()`>>
+    <<if $places.ocean == false>>
+        <<set _backward = $reversePassages.pop()>>
+    <<elseif $places.ocean == true>>
+        <<set _backward = $totalReversePassages.pop()>>
+        <<replace "#reverse">>[[Drown. | passage()]]<</replace>>
+    <</if>>
+<</link>>@@
