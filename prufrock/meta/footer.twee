@@ -1,10 +1,10 @@
 :: PassageFooter [nobr]
 /* starts countdown on timerstart tagged passages and continues it on every passage that's not tagged "notimer" */
 <<if tags().includes("timerstart") == true>>
+    <<set $reversePassages.push(passage())>>
     <<if $reverse == false>>
-        <<countdownTimer 5 'reverse'>>
+        <<countdownTimer 60 'reverse'>>
         /* reversePassages are to "rewind" */
-        <<set $totalReversePassages.push(passage())>>
     <<elseif $reverse == true>>
         <<timed 500ms t8n>>
             <<goto "Start">>
@@ -13,7 +13,6 @@
 
 <<elseif tags().includes("notimer") == true>>
     <<run forget("countdown")>>
-    <<set $reversePassages.push(passage())>>
 
 <<elseif tags().includes("notimer", "timerstart") != true>>
     <<if $reverse == false>>
@@ -22,18 +21,12 @@
             <<countdownTimer _diff "reverse">>
             /* kinda shoddy but basically if you refresh it doesn't show an error it just resets the timer (i hope people don't refresh :( ) */
         <<elseif !setup.countdown>>
-            <<countdownTimer 5 'reverse'>>
+            <<countdownTimer $sec 'reverse'>>
         <</if>>
         <<set $reversePassages.push(passage())>>
-        <<set $totalReversePassages.push(passage())>>
     <<elseif $reverse == true>>
-        <<if $places.ocean == false>>
-            /* 'rewinds' passages back to starting passage */
-            <<set _backward = $reversePassages.pop()>>
-        <<elseif $places.ocean == true>>
-            /* 'rewinds' passages back to starting passage */
-            <<set _backward = $totalReversePassages.pop()>>
-        <</if>>
+        /* 'rewinds' passages back to starting passage */
+        <<set _backward = $reversePassages.pop()>>
         <<timed 500ms t8n>>
             <<goto _backward>>
         <</timed>>

@@ -1,86 +1,162 @@
 :: city [city timerstart]
-I walk along the cobblestone [[streets | streets-city][$sec = _seconds]] of London, watching the [[evening | evening-city][$sec = _seconds]] fall before me. Brown [[buildings | buildings-city][$sec = _seconds]] crowd together in the purpling light, and the [[moon | moon-city][$sec = _seconds]] feebly hangs in the far distance.
+<<set $cityvars.hurryup = false>><<set $cityvars.mylae = false>>
+I walk along the cobblestone <<tlink "street">>s of London, watching the <<tlink "evening">>  fall before me. Brown <<tlink "buildings">> crowd together in the purpling light, and the <<tlink "moon">> feebly hangs in the far distance.
 
-I consider where to lead [[you | you-city][$sec = _seconds]] next.
+I consider where to lead <<tlink "you">> next.
 
-:: streets-city [city]
-<<if $twoMen == true>>\
-    It’s just shy of six o’clock, and the [[streetlamps | streetlamps-city][$sec = _seconds]] are starting to be lit. The scent of [[chestnuts | chestnuts-city][$sec = _seconds]] is just barely detectable through the heavy [[smog | fog-city][$sec = _seconds]], and smoke drifts from [[somewhere high above | apartment-city][$sec = _seconds]] us.
+:: street [city]
+<<if $cityvars.mylae == false>>\
+    It’s just shy of six o’clock, and the <<tlink "streetlamps">> are starting to be lit. The scent of <<tlink "chestnuts">> is just barely detectable within the heavy <<tlink "fog">>, and smoke drifts from <<tlink "apartment">>s high above us.
 
-	The streets are nearly-deserted at this time— most people have gone home for the  [[evening | evening-city][$sec = _seconds]] or found [[somewhere else | hotel-city][$sec = _seconds]] to be. Still, I spot [[two men | two men-city][$sec = _seconds]] conversing on the corner near the [[oyster bar | bar-city][$sec = _seconds]], a [[dog | dog-city][$sec = _seconds]] accompanying them.
+    The streets are nearly-deserted at this time— most people have gone home for the  <<tlink "evening">> or found some <<tlink "hotel">> to stay the night. Still, I spot <<tlink "two men">> who are in a <<tlink "conversation">> on the corner near the oyster <<tlink "bar">>, a <<tlink "dog">> accompanying them.
 <<else>>\
-    It’s a little past six o’clock, and the [[streetlamps | streetlamps-city][$sec = _seconds]] are all lit. The scent of [[chestnuts | chestnuts-city][$sec = _seconds]] is just barely detectable through the heavy [[smog | fog-city][$sec = _seconds]], and smoke drifts from [[somewhere high above | apartment-city][$sec = _seconds]] us.
+    It’s a little past six o’clock, and the <<tlink "streetlamps">> are all lit. The scent of <<tlink "chestnuts">> is just barely detectable within the heavy <<tlink "fog">>, and smoke drifts from <<tlink "apartment">>s high above us.
 
-	The streets are deserted at this time— most people have gone home for the  [[evening | evening-city][$sec = _seconds]] or found [[somewhere else | hotel-city][$sec = _seconds]] to be. Even the corner near the [[oyster bar | bar-city][$sec = _seconds]] is unoccupied.
+    The streets are deserted at this time— most people have gone home for the found some <<tlink "hotel">> to stay the night. Even the corner near the oyster <<tlink "bar">> is unoccupied.
 <</if>>
 
-:: chestnuts-city [city]
-Who could be roasting chestnuts on the [[street | streets-city][$sec = _seconds]]? The scent is too faint to follow through the [[fog | fog-city][$sec = _seconds]].
+:: chestnuts [city]
+Who could be roasting chestnuts on the <<tlink "street">>s? The scent is too faint to follow through the <<tlink "fog">>.
 
-:: evening-city [city]
-The evening splays out on the stone slab of London [[streets | streets-city][$sec = _seconds]], growing cold and numb from the [[fumes | fog-city][$sec = _seconds]] that fill the air. Its jaundiced yellow, withered rose, and sterile gray colors mix together much like a bruise. The sun has slipped into unconsciousness below the horizon, while the [[moon | moon-city][$sec = _seconds]] drags herself from a shadowed bed.
+:: evening [city]
+ The evening splays out on the stone slab of the <<tlink "street">>s behind the uneven <<tlink "buildings">>’ skyline, growing cold and numb from the <<tlink "fog">>gy fumes that fill the air. Its jaundiced yellow, withered rose, and sterile gray colors mix together much like a bruise. The sun has slipped into unconsciousness below the horizon, while the <<tlink "moon">> drags herself from a shadowed bed.
 
-:: buildings-city [city]
-The shops and [[apartments | apartment-city][$sec = _seconds]] close in, a coffin lid sliding into place over the blackened path, the pallid faces on the [[street | streets-city][$sec = _seconds]]. Two familiar retreats bend out in the gloom: the [[hotel | hotel-city][$sec = _seconds]] and the [[oyster bar | bar-city][$sec = _seconds]]. I can hear the muttering of patrons within both haunts.
+:: buildings [city]
+<<if $cityvars.mylae == false>>
+The shops and <<tlink "apartment">>s close in, a coffin lid sliding into place over the blackened path, the pallid faces on the <<tlink "street">>s. Two familiar retreats bend out in the gloom: the <<tlink "hotel">> and the oyster <<tlink "bar">>. I can hear the muttering of patrons within both haunts, and there might be the whine of a <<tlink "mandolin">> from somewhere nearby.
 
-:: moon-city [city]
-The moon has been caught in a sleepy half-wink tonight, so old that she forgets to brighten the [[cobblestone streets | streets-city][$sec = _seconds]] much at all. Alas, we must rely on the [[streetlamps | streetlamps-city][$sec = _seconds]] to guide us.
+As well, <<tlink "two men">> with a <<tlink "dog">> mutter in <<tlink "conversation">> on the corner.
+<<else>>
+The shops and <<tlink "apartment">>s close in, a coffin lid sliding into place over the blackened <<tlink "street">>s. Two familiar retreats bend out in the gloom: the <<tlink "hotel">> and the oyster <<tlink "bar">>. I can hear the muttering of patrons within both haunts, and there might be the whine of a <<tlink "mandolin">> from somewhere nearby.
+<</if>>
 
-:: streetlamps-city [city]
-The streetlamps sputter as the gas within their bulbs coughs out light. They helpfully point out the missing cobblestones in the [[street | streets-city][$sec = _seconds]], the alleyways to avoid, and the crumbling brick of the surrounding [[buildings | buildings-city][$sec = _seconds]].
+:: mandolin [city]
+The <<tlink "fog">> is doing a good job of smothering it, but the hints of someone plucking away at a mandolin can be caught on the breeze, if you strain your ears for the highest notes. Slightly-off key, the tune could perhaps be in the general direction of the oyster <<tlink "bar">>, but really could be from anywhere within the meandering <<tlink "street">>s. It’s hard to say for sure.
 
-:: you-city [city]
-You and I walk through the [[streets | streets-city][$sec = _seconds]] — or rather, I lead and you follow. Arguing with me has always been a tedious endeavor, so you have elected not to convince me to turn back home, or to even ask where I might be taking you.
+:: moon [city]
+The moon has been caught in a sleepy half-wink tonight, so old that she forgets to brighten the cobblestone <<tlink "street">>s much at all. Alas, we must rely on the <<tlink "streetlamps">> to guide us.
+
+:: streetlamps [city]
+The streetlamps sputter as the gas within their bulbs coughs out light. They helpfully point out the missing cobblestones in the <<tlink "street">>s, the alleyways to avoid, and the crumbling brick of the surrounding <<tlink "buildings">>.
+
+:: you [city]
+You and I walk through the <<tlink "street">>s— or rather, I lead and you follow. Arguing with me has always been a tedious endeavor, so you have elected not to convince me to turn back home, or to even ask where I might be taking you.
 
 I appreciate you for that.
 
-:: two men-city [city]
-Two men converse next to the [[oyster bar | bar-city][$sec = _seconds]], illuminated by the [[streetlamps | streetlamps-city][$sec = _seconds]]. More accurately, [[one man | merchant-city][$sec = _seconds]] with a black eye talks at another man with a hat and a leashed [[dog | dog-city][$sec = _seconds]] at his feet. Their [[conversation | mylae-city][$sec = _seconds]] seems unusual.
+:: two men [city]
+Two men converse next to the oyster <<tlink "bar">>, illuminated by the <<tlink "streetlamps">>. More accurately, one man with a black eye who looks like a <<tlink "merchant">> talks at another <<tlink "man with a hat">> and a leashed <<tlink "dog">> at his feet. Their <<tlink "conversation">> seems unusual.
 
-:: merchant-city [city]
-One of this man’s eyes is bruised and completely swollen shut, perhaps from a fight in the nearby [[bar | bar-city][$sec = _seconds]]. His other eye flicks about the [[street | streets-city][$sec = _seconds]] as he [[chatters | mylae-city][$sec = _seconds]] in a melodic foreign accent. He is dressed in baggy clothing with his hands in [[laden pockets | pockets-city][$sec = _seconds]], bearing an unkempt mustache and beard. [[Something | something-city][$sec = _seconds]] is shouldered on his back.
+:: merchant [city]
+One of this man’s eyes is bruised and completely swollen shut, perhaps from a fight in the nearby <<tlink "bar">>. His other eye flicks about the <<tlink "street">>, keeping up his side of the <<tlink "conversation">> with the <<tlink "man with a hat">> in a melodic foreign accent. He is dressed in baggy clothing with his hands in laden <<tlink "pockets">>, bearing an unkempt mustache and beard. Some<<tlink "thing">> is shouldered on his back.
 
-:: something-city [city]
-I don’t know what the thing on [[his | merchant-city][$sec = _seconds]] back is. Someone wise once told me she wasn’t supposed to see such a thing, so I’m not about to try peeking around it myself, you know. It seems a bad idea.
+:: thing [city]
+I don’t know what the thing on the <<tlink "merchant">>’s back is. Someone wise once told me she wasn’t supposed to see such a thing, so I’m not about to try peeking around it myself, you know. It seems a bad idea.
 
-:: pockets-city [city]
-The [[one-eyed man | merchant-city][$sec = _seconds]]’s pockets are stuffed with something that shifts in shape as he moves his hands within them. Actually, it seems to be multiple things rolling about within, such as beads or coins. Whenever one of the things happens falls out of his pocket and bounce onto the [[street | streets-city][$sec = _seconds]], the [[dog | dog-city][$sec = _seconds]] lunges over to wolf it down.
+:: pockets [city]
+The one-eyed <<tlink "merchant">>’s pockets are stuffed with something that shifts in shape as he moves his hands within them. Actually, it seems to be multiple things rolling about within, such as beads or coins. Whenever one of the things happens falls out of his pocket and bounce onto the <<tlink "street">>, the <<tlink "dog">> lunges over to wolf it down.
 
-:: stetson-city [city]
-This man is nodding along and shrugging during the [[monologue | mylae-city][$sec = _seconds]] but otherwise says nothing. He looks elderly, with a pointed white beard and a black, wide-brimmed hat upon his head. He grips the [[dog | dog-city][$sec = _seconds]]’s leash tightly in one gloved fist. Occasionally he looks up at the darkening [[sky | evening-city][$sec = _seconds]], gestures to his watch, and attempts to leave, but the first [[man | merchant-city][$sec = _seconds]] pulls him back.
+:: man with a hat [city]
+This man is nodding along and shrugging during the <<tlink "conversation">>, or monologue, but otherwise says nothing. He appears quite elderly, with a pointed white beard and a black, wide-brimmed hat upon his head. He grips the <<tlink "dog">>’s leash tightly in one gloved fist. Occasionally he looks up at the darkening <<tlink "evening">>, gestures to his watch, and attempts to leave, but the <<tlink "merchant">> pulls him back.
 
-:: dog-city [city]
-An incredibly small yorkshire terrier leashed by the [[man in the hat.| stetson-city][$sec = _seconds]] Its expression is doleful and dour, which contrasts in an amusing manner with the bow on its head. Whenever a small item slips from the [[pockets | pockets-city][$sec = _seconds]] of the [[one-eyed man | merchant-city][$sec = _seconds]], the dog quickly licks it up.
+:: dog [city]
+An incredibly small yorkshire terrier leashed by the <<tlink "man with a hat">>. Its expression is doleful and dour, which contrasts in an amusing manner with the bow on its head. Whenever a small item slips from the <<tlink "pockets">> of the one-eyed <<tlink "merchant">>, the dog quickly licks it up.
 
-:: mylae-city [city]
-“Stetson! You who were with me in the ships at Mylae!” @@.delayed;The one-eyed man's accent seems to be from somewhere in the Greek isles, though it doesn’t sound modern to my ears. “That corpse you planted last year in your garden,@@ @@.delayed;has it begun to sprout? Will it bloom this year? Or has the sudden frost disturbed its bed?”@@
+:: conversation [city]
+You can hear the conversation progressing on the other side of the <<tlink "street">>. “Stetson! You who were with me in the ships at Mylae!” @@.delayed;The one-eyed man's accent seems to be from somewhere in the Greek isles, though it doesn’t sound modern to my ears. “That corpse you planted last year in your garden,@@ @@.delayed;has it begun to sprout? Will it bloom this year? Or has the sudden frost disturbed its bed?”@@
 
 @@.delayed;The dog begins to yap and growl at this, until Stetson has to pull him back.
 
-The first man laughs.@@ @@.delayed;“Oh keep the dog far hence that's friend to men, or with his nails he'll dig it up again!@@
+The merchant laughs.@@ @@.delayed;“Oh keep the dog far hence that's friend to men, or with his nails he'll dig it up again!@@
 
-@@.delayed;Finally, Stetson clears his throat loudly — audible even from this distance — tips his hat, and turns to go. His dog follows dutifully.
+@@.delayed;Finally, Stetson clears his throat loudly— audible even from this distance— tips his hat, and turns to go. His dog follows dutifully.
 
-As Stetson briskly walks down the street, the first man follows, waving and calling after him.@@ @@.delayed;“You! hypocrite lecteur! Mon semblable,—mon frère!”@@
+As Stetson briskly walks down the street, the merchant follows, waving and calling after him.@@ @@.delayed;“You! Hypocrite lecteur! Mon semblable— mon frère!” He is studiously ignored.@@
 
-@@.delayed;Soon, the corner next to the [[oyster bar | bar-city][$sec = _seconds]] is unoccupied. <<set $twoMen = false>>@@
+@@.delayed;Soon, the corner next to the oyster <<tlink "bar">> is unoccupied. <<set $cityvars.mylae = true>>@@
 
-@@.stop;[[Return to the street | streets-city][$sec = _seconds]].@@
+:: fog [city]
+The fog prowls along the <<tlink "street">>s and smothers <<tlink "buildings">> with a foul, rotten-egg stench. It’s nearly thick enough to caress under the fingers.
 
-:: fog-city [city]
-The fog prowls along the [[streets | streets-city][$sec = _seconds]] and smothers [[buildings | buildings-city][$sec = _seconds]] with a foul, rotten-egg stench. It’s nearly thick enough to caress under the fingers.
+:: apartment [city]
+Tenements crammed between tenements, stuffing themselves into <<tlink "street">> blocks. Smoke rises and falls in puffs from an open window, and through it, a bent <<tlink "silhouette">> is almost visible.
 
-:: apartment-city [city]
-Tenements crammed between tenements. [[Smoke | pipe-city][$sec = _seconds]] rises and falls in puffs from an open window, and through it, a bent [[silhouette | lonely man-city][$sec = _seconds]] is almost visible.
+:: silhouette [city]
+The smoke dissipates periodically, and as it thins, the silhouette asserts into the shape of a man, partially-slumped out of the <<tlink "apartment">> window. His shirt sleeves are stained with dirt and rolled above his forearms. One arm props him on the sill as he gazes at the <<tlink "evening">>, and the other loosely holds a <<tlink "pipe">>.
 
-:: lonely man-city [city]
-The smoke dissipates periodically, and as it thins, the silhouette asserts into the shape of a man, partially-slumped out of the window. His shirt sleeves are stained with dirt and rolled above his forearms. One arm props him on the sill as he gazes at the [[sky | evening-city][$sec = _seconds]], and the other loosely holds a [[pipe | pipe-city][$sec = _seconds]].
+:: pipe [city]
+A warm tobacco smell is the tip-off for the thin curved shape hidden in the smoke— a wooden pipe held by the <<tlink "silhouette">>d man.
 
-:: pipe-city [city]
-A warm tobacco smell is the tip-off for the small curved shape in the darkness— a wooden pipe held by a silhouetted [[man | lonely man-city][$sec = _seconds]].
+:: bar [bar]
+The pungent odor of <<tlink "oyster">>s is, of course, what hits the senses first. Dim lanterns hang from a drooping ceiling and <<tlink "sawdust">> buries the floor. <<if $cityvars.hurryup == false>>Bar <<tlink "patrons">> laugh and jostle each other on their stools, tipping <<tlink "drinks">> into mouths dried from endless <<tlink "chatter">>.<<else>>There are a few unfinished <<tlink "drinks">> left on the bar.<</if>> Outside on the <<tlink "street">>, the cooling <<tlink "evening">> awaits.
 
-:: bar-city [city]
-an oyster bar
+:: sawdust [bar]
+This <<tlink "bar">> isn’t the classiest place, as proven by the heavily trampled sawdust. Tracked footprints that reveal the wooden floor beneath are ghost-like signs of <<if $cityvars.hurryup== false>>the <<tlink "patrons">>’<<else>>past patrons’<</if>> presence, but they’re quickly exorcised by the shoes of harried waiters. The fragments of <<tlink "oyster">> shells, stains left by spilled <<tlink "drinks">> and more hide like artifacts in the sifting sandy grains.
 
-:: hotel-city [city]
-a hotel
+:: oyster [bar]
+The <<tlink "bar">> has oysters on ice in a display case, their shells gaping as if surprised at where they’ve ended up. A strong briny smell, which is released as each oyster is cracked open, soaks into the walls and <<tlink "sawdust">> floor.
+
+:: drinks [bar]
+<<if $cityvars.hurryup == false>>Cocktails and beer are being served to various <<tlink "patrons">>. Some have already baptized the <<tlink "sawdust">> with their sloshing, less-than-holy spirits.<<else>>The stains of less-than-holy spirits seep into the <<tlink "sawdust">>.<</if>>
+
+:: chatter [bar]
+<<set $cityvars.hurryup = true>>
+At the <<tlink "bar">>, a lady is loudly and animatedly acting out the conversation she had with her friend about another conversation. Some of the people around her nearly slip off their barstools as they lean in to listen. @@.delayed;“When Lil’s husband got demobbed, I said—I didn’t mince my words, I said to her myself,@@
+
+@@.delayed;“‘Now Albert’s coming back, make yourself a bit smart. He’ll want to know what you done with that money he gave you to get yourself some teeth.’”@@
+
+@@.delayed;Someone speaks in the uptones of a question and she nods vigorously. "He did, I was there!” And continues:
+
+“‘You have them all out, Lil, and get a nice set.’@@
+
+@@.delayed;“He said,’—” here her voice drops as she imitates Albert— “‘//‘I swear, I can’t bear to look at you.’//
+
+“‘And no more can’t I’, I said, @@ @@.delayed;‘and think of poor Albert! He’s been in the army four years, he wants a good time, and if you don’t give it him, there’s others will’, I said.”@@
+
+@@.delayed;The woman preens as the surrounding people murmer in agreement. Her voice pitches up, breathy and shrill: “‘Oh is there?’ she said.@@
+
+@@.delayed;“‘Something o’ that,’ I said.
+
+“‘Then I’ll know who to thank,’ she said, and gave me a straight look.”@@
+
+@@.delayed;Everyone laughs at the joke and her impression of Lil's glare, the men shoving and slapping each other on the back and the women tittering with their hands lifted to their mouths.@@
+
+@@.delayed;“‘If you don’t like it you can get on with it,’ I said. ‘Others can pick and choose if you can’t. But if Albert makes off, it won’t be for lack of telling. You ought to be ashamed, I said, to look so antique.”@@ @@.delayed;The woman shakes her head in disapproval. “And her only thirty-one.@@
+
+@@.delayed;“‘I can’t help it’, she said, pulling a long face. ‘It’s them pills I took, to bring if off’, she said.”@@
+
+@@.delayed;To the audience, the lady adds, “She’s had five already, and nearly died of young George.” This elicits more head shaking and clicked tongues.@@ @@.delayed;Continuing as Lil:
+
+“‘The chemist said it would be all right, but I’ve never been the same.’@@
+
+@@.delayed;‘You are a proper fool,’ I said. ‘Well, if Albert won’t leave you alone, there it is,’ I said, ‘What you get married for if you don’t want children?’”@@
+
+@@.delayed;At this point, the barman starts to shoo her and the other ones away, who seem to have overstayed their welcome.@@ @@.delayed;She continues, undeterred:
+
+“Well, that Sunday Albert was home, they had a hot gammon, and they asked me in to dinner, to get the beauty of it hot—”@@
+
+@@.delayed;The barman’s voice raises, repeating his call for her to leave. Finally, she gets up, and the other people around her follow suit. They exchange hugs and kisses, to the barman’s irritation.@@
+
+@@.delayed; “Goonight Bill.”
+
+“Goonight Lou.”
+
+“Goonight May.”
+
+“Goonight.”
+
+“Ta ta.”
+
+“Goonight.”
+
+“Goonight.@@
+
+@@.delayed;The barman’s face smooths out, obsequious and pleasing, as he ushers the group out the door and onto the <<tlink "street">>. “Good night, ladies. Good night sweet ladies. Good night, good night.”@@
+
+:: patrons [bar]
+These people— factory workers, sailors, laborers and their wives, are covered in grime and fatigue, but look cheery nonetheless. It could be the <<tlink "drinks">> or the delicious <<tlink "oyster">>s that brighten their spirits— or more likely, it could be the lady gesticulating wildly and <<tlink "chatter">>ing about a recent interaction of hers.
+
+:: hotel [hotel]
+hotel wip
+
+Back to <<tlink "street">>.

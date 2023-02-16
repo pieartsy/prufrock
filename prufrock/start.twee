@@ -1,66 +1,71 @@
 :: Start [start notimer]
-Let me reverse the clocks, the hours ''in''
-which I die a million times and ''a''
-million ways in a single ''minute'',
-  
-standing stiff as rigor mortis ''there''
-in the corner where no one ''is''
-watching, watching for every ''time''
-  
-they laugh and turn away ''for''
-I can't help but calculate ''decisions''
-like a survivor, shipwrecked ''and''
+<<set $reversePassages = ['Start']>>\
+<<if $places.city == false>>\
+Let me reverse the clocks, the hours in
+which I die a million times and a
+million ways in a single minute,
 
-stranded in a sea of ''revisions''
-of choices never made ''which''
-haunt me nonetheless, ''a''
+standing stiff as rigor mortis there
+in the corner where no one is
+watching, watching for every time
 
-coffin where even a ''minute''
-mistake can lead to ends that ''will''
-undo me. Let me do them in\
-<<nobr>>
-<<set $reverse = false>>
-<<if $places.city == false>>
-    [[reverse | city]]
-<<elseif $places.cat == false>>
-    [[reverse | cat]]
-<<elseif $places.room == false>>
-    [[reverse | room]]
-<<elseif $places.tea == false>>
-    [[reverse | tea]]
-<<elseif $places.hamlet == false>>
-    [[reverse | hamlet]]
-<<elseif $places.beach == false>>
-    [[reverse | beach]]
-<<elseif $places.ocean == false>>
-    [[reverse | ocean]]
-<</if>>.
-<</nobr>>
+they laugh and turn away for
+I can't help but calculate decisions
+like a survivor, shipwrecked and
+
+stranded in a sea of revisions
+of choices never made which
+haunt me nonetheless, a
+
+coffin where even a minute
+mistake can lead to ends that will
+undo me. Let me do them in [[reverse | city]].
+<<elseif $places.city == true>>\
+<<set $reverse = false>>\
+Let me reverse the clocks, the hours @@.endwords;in@@
+which I die a million times and @@.endwords;a@@
+million ways in a single @@.endwords;minute,@@
+  
+standing stiff as rigor mortis @@.endwords;there@@
+in the corner where no one @@.endwords;is@@
+watching, watching for every @@.endwords;time@@
+
+they laugh and turn away @@.endwords;for@@
+I can't help but calculate @@.endwords;decisions@@
+like a survivor, shipwrecked @@.endwords;and@@
+
+stranded in a sea of @@.endwords;revisions@@
+of choices never made @@.endwords;which@@
+haunt me nonetheless, @@.endwords;a@@
+
+coffin where even a @@.endwords;minute@@
+mistake can lead to ends that @@.endwords;will@@
+undo me. Let me do them in @@.endwords;reverse.@@
+<<timed 8s t8n>>
+[[Revise. | city][$places.city = false]]
+[[Credits]]
+<</timed>>
+<</if>>
 
 :: reverse [notimer nobr]
 <<silently>>
-<<run forget("countdown")>>
 <<set $reverse = true>>
-<<if $places.city == false>>
-    <<set $places.city = true>>
-<<elseif $places.cat == false>>
-    <<set $places.cat = true>>
-<<elseif $places.room == false>>
-    <<set $places.room = true>>
-<<elseif $places.tea == false>>
-    <<set $places.tea = true>>
-<<elseif $places.hamlet == false>>
-    <<set $places.hamlet = true>>
-<<elseif $places.beach == false>>
-    <<set $places.beach = true>>
-<<elseif $places.ocean == false>>
-    <<set $places.ocean = true>>
-<</if>><</silently>>
-@@#reverse;<<link "Reverse." `passage()`>>
-    <<if $places.ocean == false>>
-        <<set _backward = $reversePassages.pop()>>
-    <<elseif $places.ocean == true>>
-        <<set _backward = $totalReversePassages.pop()>>
-        <<replace "#reverse">>[[Drown. | passage()]]<</replace>>
-    <</if>>
-<</link>>@@
+<<set $places.city = true>>
+<<set _backward = $reversePassages.pop()>>
+<</silently>>
+@@#reverse;[[Reverse. | _backward]]@@
+
+:: Credits [notimer meta]
+Writing by [[Aster Fialla|https://asterfialla.com]] and [[T.S. Eliot|https://www.poetryfoundation.org/poets/t-s-eliot]] with primary inspiration from:
+* [[The Love Song of J. Alfred Prufrock | https://jpellegrino.com/teaching/eliot-prufrock.html]]
+* [[The Waste Land | https://wasteland.windingway.org/poem#293]]
+* [[Rhapsody on a Windy Night | https://www.poetryfoundation.org/poems/44215/rhapsody-on-a-windy-night]]
+* A smattering of references to other poems.
+
+I (Aster) wrote the poem on the title page.
+
+[[Story seed|https://itch.io/jam/seed-comp-1-planting/rate/1825494]] by [[Amanda Walker|https://amanda-walker.itch.io/]] for [[SeedComp|https://itch.io/jam/seed-comp-1-growing]] under the CC-BY-NC license
+
+Timer macro and Delayed Text code by [[HiEv|https://qjzhvmqlzvoo5lqnrvuhmg.on.drv.tw/UInv/Sample_Code.html#Main%20Menu]]
+
+[[Revise. | city][$places.city = false]]

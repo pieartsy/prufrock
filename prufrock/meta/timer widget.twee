@@ -44,3 +44,9 @@
 	<</script>>
 <</widget>>
 /* <<countdownTimer>> Widget - End */
+
+<<widget "tlink">>
+	/* functionally a link, but makes writing links easier */
+	<<set _name = _args[0]>>
+	[[_name][$sec = _seconds]]\
+<</widget>>

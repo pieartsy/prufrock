@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;1,400;1,700&display=swap');
 
 html {
     font-family: 'Gentium Book Plus', 'Garamond', 'Times New Roman', serif;
     font-size: 25px;
-}
-
-html a {
-    font-weight: bolder;
 }
 
 #passages {
@@ -22,9 +18,27 @@ html a {
     margin: auto;
 }
 
+a {
+    font-weight: bolder;
+}
+
+a:after {
+    font-size: 0;
+}
+
+
+a.link-broken {
+    color: red;
+}
+
 /* delayed text */
 .delayed {
     opacity: 0;
+}
+
+/* so the "restart" dialog is visible */
+#reverse {
+    font-size: 40px;
 }
 
 /* stop listening to dialogue */
@@ -34,8 +48,9 @@ html a {
 }
 
 /* start passage */
-body.start {
-    background-color: rgb(251, 245, 239);
+body.start,
+body.meta {
+    background-color: rgb(233, 221, 210);
     color: rgb(16, 8, 8);
 }
 
@@ -44,9 +59,21 @@ body.start {
     margin: auto;
 }
 
-.passage.start a {
+.passage.start a,
+.passage.meta a {
     color: rgb(189, 11, 11);
 }
+
+.endwords {
+    transition: all 2s linear;
+}
+
+.bold {
+    text-shadow: 0 0 5px black;
+    transition: 0.6s;
+}
+
+/* city */
 
 body.city,
 body.citystart {
@@ -62,4 +89,31 @@ body.city .timer {
 .passage.city a,
 .passage.citystart a {
     color: yellow;
+}
+
+.passage.city a.link-visited,
+.passage.citystart a.link-visited {
+    color: rgb(222, 148, 12);
+    font-style: italic;
+}
+
+body.bar,
+body.bar {
+    background-color: rgb(199, 165, 154);
+    color: rgb(4, 3, 3);
+}
+
+body.bar .timer,
+body.bar .timer {
+    color:hsla(0, 100%, 92%, 0.25)
+}
+
+.passage.bar a {
+    color: rgb(111, 37, 0);
+}
+
+.passage.bar a.link-visited {
+    color: rgb(116, 2, 50);
+    font-style: italic;
+
 }
