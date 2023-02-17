@@ -48,5 +48,10 @@
 <<widget "tlink">>
 	/* functionally a link, but makes writing links easier */
 	<<set _name = _args[0]>>
-	[[_name][$sec = _seconds]]\
+	<<if _args[1]>>
+		<<set _plural = _args[1]>>
+		[[_plural | _name][$sec = _seconds]]\
+	<<else>>
+		[[_name][$sec = _seconds]]\
+	<</if>>\
 <</widget>>
