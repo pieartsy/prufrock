@@ -41,9 +41,12 @@ haunt me nonetheless, @@.endwords;a@@
 coffin where even a @@.endwords;minute@@
 mistake can lead to ends that @@.endwords;will@@
 undo me. Let me do them in @@.endwords;reverse.@@
-<<timed 8s t8n>>
+<<timed 9s t8n>>
 [[Revise. | city][$places.city = false]]
 [[Credits]]
+<<next 50ms>>
+/* scrolls down to the bottom to show the revise and credits */
+<<run $('.passage > *:last-child').get(0).scrollIntoView({behavior: 'smooth'})>>
 <</timed>>
 <</if>>
 
@@ -67,6 +70,8 @@ I (Aster) wrote the poem on the title page.
 [[Story seed|https://itch.io/jam/seed-comp-1-planting/rate/1825494]] by [[Amanda Walker|https://amanda-walker.itch.io/]] for [[SeedComp|https://itch.io/jam/seed-comp-1-growing]] under the CC-BY-NC license
 
 Timer macro and Delayed Text code by [[HiEv|https://qjzhvmqlzvoo5lqnrvuhmg.on.drv.tw/UInv/Sample_Code.html#Main%20Menu]]
+
+Thank you to my bug testers: Josh Grams, Austin Auclair, and B. Murchhona!
 
 This is version 1 of a bigger game that will have seven places to explore, which I'll release ~someday!
 

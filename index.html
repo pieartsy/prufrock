@@ -507,9 +507,12 @@ haunt me nonetheless, @@.endwords;a@@
 coffin where even a @@.endwords;minute@@
 mistake can lead to ends that @@.endwords;will@@
 undo me. Let me do them in @@.endwords;reverse.@@
-&lt;&lt;timed 8s t8n&gt;&gt;
+&lt;&lt;timed 9s t8n&gt;&gt;
 [[Revise. | city][$places.city = false]]
 [[Credits]]
+&lt;&lt;next 50ms&gt;&gt;
+/* scrolls down to the bottom to show the revise and credits */
+&lt;&lt;run $(&#39;.passage &gt; *:last-child&#39;).get(0).scrollIntoView({behavior: &#39;smooth&#39;})&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="reverse" tags="notimer nobr" position="475,600" size="100,100">&lt;&lt;silently&gt;&gt;
 &lt;&lt;set $reverse = true&gt;&gt;
@@ -527,6 +530,8 @@ I (Aster) wrote the poem on the title page.
 [[Story seed|https://itch.io/jam/seed-comp-1-planting/rate/1825494]] by [[Amanda Walker|https://amanda-walker.itch.io/]] for [[SeedComp|https://itch.io/jam/seed-comp-1-growing]] under the CC-BY-NC license
 
 Timer macro and Delayed Text code by [[HiEv|https://qjzhvmqlzvoo5lqnrvuhmg.on.drv.tw/UInv/Sample_Code.html#Main%20Menu]]
+
+Thank you to my bug testers: Josh Grams, Austin Auclair, and B. Murchhona!
 
 This is version 1 of a bigger game that will have seven places to explore, which I&#39;ll release ~someday!
 
