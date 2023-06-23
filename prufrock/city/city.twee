@@ -1,0 +1,88 @@
+:: city [city timerstart]
+<<set $cityvars.mylae = false>><<set $cityvars.hurryup = false>>\
+I walk along the cobblestone <<tlink "street" "streets">> of London, watching the <<tlink "evening">>  fall before me. Brown <<tlink "buildings">> crowd together in the purpling light, and the <<tlink "moon">> feebly hangs in the far distance.
+
+I consider where to lead <<tlink "you">> next.
+
+:: street [city]
+<<if $cityvars.mylae == false>>\
+    It’s just shy of six o’clock, and the <<tlink "streetlamps">> are starting to be lit. The scent of <<tlink "chestnuts">> is just barely detectable within the heavy <<tlink "fog">>, and smoke drifts from <<tlink "apartment" "apartments">> high above us.
+
+    The streets are nearly-deserted at this time— most people have gone home for the  <<tlink "evening">> or found some <<tlink "hotel">> to stay the night. Still, I spot <<tlink "two men">> who are in a <<tlink "conversation">> on the corner near the oyster <<tlink "bar">>, a <<tlink "dog">> accompanying them.
+<<else>>\
+    It’s a little past six o’clock, and the <<tlink "streetlamps">> are all lit. The scent of <<tlink "chestnuts">> is just barely detectable within the heavy <<tlink "fog">>, and smoke drifts from <<tlink "apartment" "apartments">> high above us.
+
+    The streets are deserted at this time— most people have gone home for the found some <<tlink "hotel">> to stay the night. Even the corner near the oyster <<tlink "bar">> is unoccupied.
+<</if>>
+
+:: chestnuts [city]
+Who could be roasting chestnuts on the <<tlink "street" "streets">>? The scent is too faint to follow through the sulfurous <<tlink "fog">>, though it’s really the only appealing smell that can be found around here.
+
+:: evening [city]
+ The evening splays out on the stone slab of the <<tlink "street" "streets">> behind the uneven <<tlink "buildings" "buildings’">> skyline, growing cold and numb from the <<tlink "fog" "foggy">> fumes that fill the air. Its jaundiced yellow, withered rose, and sterile gray colors mix together much like a bruise. The sun has slipped into unconsciousness below the horizon, while the <<tlink "moon">> drags herself from a shadowed bed.
+
+:: buildings [city]
+<<if $cityvars.mylae == false>>\
+The shops and <<tlink "apartment" "apartments">> close in, a coffin lid sliding into place over the blackened path, the pallid faces on the <<tlink "street" "streets">>. Two familiar retreats bend out in the gloom: the <<tlink "hotel">> and the oyster <<tlink "bar">>. I can hear the muttering of patrons within both haunts, and there might be the whine of a <<tlink "mandolin">> from somewhere nearby.
+
+As well, <<tlink "two men">> and a <<tlink "dog">> mutter in <<tlink "conversation">> on the corner.
+<<else>>
+The shops and <<tlink "apartment" "apartments">> close in, a coffin lid sliding into place over the blackened <<tlink "street" "streets">>. Two familiar retreats bend out in the gloom: the <<tlink "hotel">> and the oyster <<tlink "bar">>. I can hear the muttering of patrons within both haunts, and there might be the whine of a <<tlink "mandolin">> from somewhere nearby.
+<</if>>
+
+:: mandolin [city]
+The <<tlink "fog">> is doing a good job of muting it, but the hints of someone plucking away at a mandolin can be caught on the breeze, if I strain my ears for the highest notes. Slightly-off key, the tune could perhaps be in the general direction of the oyster <<tlink "bar">>, but really could be from anywhere within the meandering <<tlink "street" "streets">>. It’s hard to say for sure.
+
+:: moon [city]
+The moon has been caught in a sleepy half-wink tonight, so old that she forgets to brighten the cobblestone <<tlink "street" "streets">> much at all. Alas, we must rely on the <<tlink "streetlamps">> to guide us.
+
+:: streetlamps [city]
+The streetlamps sputter as the gas within their bulbs coughs out light. They helpfully point out the missing cobblestones in the <<tlink "street" "streets">>, the alleyways to avoid, and the crumbling brick of the surrounding <<tlink "buildings">>.
+
+:: you [city]
+You and I walk through the <<tlink "street" "streets">>— or rather, I lead and you follow. Arguing with me has always been a tedious endeavor, so you have elected not to convince me to turn back home, or to even ask where I might be taking you.
+
+I appreciate you for that.
+
+:: two men [city]
+Two men converse next to the oyster <<tlink "bar">>, illuminated by the <<tlink "streetlamps">>. More accurately, one man with a black eye who looks like a <<tlink "merchant">> talks at another <<tlink "man with a hat">> and a leashed <<tlink "dog">> at his feet. Their <<tlink "conversation">> seems unusual.
+
+:: merchant [city]
+One of this man’s eyes is bruised and completely swollen shut, perhaps from a fight in the nearby <<tlink "bar">>. His other eye flicks about the <<tlink "street">>, keeping up his side of the <<tlink "conversation">> with the <<tlink "man with a hat">> in a melodic foreign accent. He is dressed in baggy clothing with his hands in laden <<tlink "pockets">>, bearing an unkempt mustache and beard. Some<<tlink "thing">> is shouldered on his back.
+
+:: thing [city]
+I don’t know what the thing on the <<tlink "merchant" "merchant’s">> back is. Someone wise once told me she wasn’t supposed to see such a thing, so I’m not about to try peeking around it myself, you know. It seems a bad idea.
+
+:: pockets [city]
+The one-eyed <<tlink "merchant" "merchant’s">> pockets are stuffed with something that shifts in shape as he moves his hands within them. Actually, it seems to be multiple things rolling about within, such as beads or coins. Whenever one of the things happens to fall out of his pocket and bounce onto the <<tlink "street">>, the <<tlink "dog">> lunges over to wolf it down.
+
+:: man with a hat [city]
+This man is nodding along and shrugging during the <<tlink "conversation">>, or monologue, but otherwise says nothing. He looks elderly, with a pointed white beard and a black, wide-brimmed hat upon his head. He grips the <<tlink "dog" "dog’s">> leash tightly in one gloved fist. Occasionally he looks up at the darkening <<tlink "evening">>, gestures to his watch, and attempts to leave, but the <<tlink "merchant">> pulls him back.
+
+:: dog [city]
+An incredibly small yorkshire terrier leashed by the <<tlink "man with a hat">>. Its expression is doleful and dour, which contrasts in an amusing manner with the bow on its head. Whenever a small item slips from the <<tlink "pockets">> of the one-eyed <<tlink "merchant">>, the dog quickly licks it up.
+
+:: conversation [city]
+You can hear the conversation progressing on the other side of the <<tlink "street">>. “Stetson! You who were with me in the ships at Mylae!” @@.delayed;The one-eyed man's accent seems to be from somewhere in the Greek isles, though it doesn’t sound modern to my ears. “That corpse you planted last year in your garden,@@ @@.delayed;has it begun to sprout? Will it bloom this year? Or has the sudden frost disturbed its bed?”@@
+
+@@.delayed;The dog begins to yap and growl at this, until Stetson has to pull him back.
+
+The merchant laughs.@@ @@.delayed;“Oh keep the dog far hence that's friend to men, or with his nails he'll dig it up again!@@
+
+@@.delayed;Finally, Stetson clears his throat loudly— audible even from this distance— tips his hat, and turns to go. His dog follows dutifully.
+
+As Stetson briskly walks down the street, the merchant follows, waving and calling after him.@@ @@.delayed;“You! Hypocrite lecteur! Mon semblable— mon frère!” He is studiously ignored.@@
+
+@@.delayed;Soon, the corner next to the oyster <<tlink "bar">> is unoccupied.<<set $cityvars.mylae = true>>@@
+
+:: fog [city]
+The fog prowls along the <<tlink "street" "streets">> and smothers <<tlink "buildings">> with a foul, rotten-egg stench. It’s nearly thick enough to caress under the fingers.
+
+:: apartment [city]
+Tenements crammed between tenements. Smoke rises and falls in puffs from an open window, and through it, a bent <<tlink "silhouette">> is almost visible.
+
+:: silhouette [city]
+The smoke dissipates periodically into the <<tlink "evening">> air, and as it thins, the silhouette asserts into the shape of a man, partially-slumped out of the window. His shirt sleeves are stained with dirt and rolled above his forearms. One arm props him on the sill as he surveys the <<tlink "street">>, and the other loosely holds a <<tlink "pipe">>.
+
+:: pipe [city]
+A warm tobacco smell is the tip-off for the thin curved shape hidden in the smoke— a wooden pipe held by a <<tlink "silhouette" "silhouetted">> man.

@@ -1,0 +1,654 @@
+:: StoryTitle
+In a minute there is time
+
+:: StoryData
+{
+    "ifid": "8068BBB6-1CD3-4C86-AA01-F2FF43EB42A6",
+    "format": "SugarCube",
+    "format-version": "2.36.1"
+}
+
+
+
+:: Start [start notimer]
+<<set $reversePassages = ['Start']>>\
+<<set $reverse = false>>\
+<<if visited() == 1>>\
+Let me reverse the clocks, the hours in
+which I die a million times and a
+million ways in a single minute,
+
+standing stiff as rigor mortis there
+in the corner where no one is
+watching, watching for every time
+
+they laugh and turn away for
+I can't help but calculate decisions
+like a survivor, shipwrecked and
+
+stranded in a sea of revisions
+of choices never made which
+haunt me nonetheless, a
+
+coffin where even a minute
+mistake can lead to ends that will
+undo me. Let me do them in [[reverse | city]].
+<<elseif visited() == 2>>\
+Let me reverse the clocks, the hours @@.endwords;in@@
+which I die a million times and @@.endwords;a@@
+million ways in a single @@.endwords;minute,@@
+  
+standing stiff as rigor mortis @@.endwords;there@@
+in the corner where no one @@.endwords;is@@
+watching, watching for every @@.endwords;time@@
+
+they laugh and turn away @@.endwords;for@@
+I can't help but calculate @@.endwords;decisions@@
+like a survivor, shipwrecked @@.endwords;and@@
+
+stranded in a sea of @@.endwords;revisions@@
+of choices never made @@.endwords;which@@
+haunt me nonetheless, @@.endwords;a@@
+
+coffin where even a @@.endwords;minute@@
+mistake can lead to ends that @@.endwords;will@@
+undo me. Let me do them in @@.endwords;reverse.@@
+<<timed 9s t8n>>
+[[Revise. | city][$places.city = false]]
+[[Credits]]
+<<next 50ms>>
+/* scrolls down to the bottom to show the revise and credits */
+<<run $('.passage > *:last-child').get(0).scrollIntoView({behavior: 'smooth'})>>
+<</timed>>
+<<elseif visited() > 2>>\
+<<set $reverse = false>>\
+Let me reverse the clocks, the hours ''in''
+which I die a million times and ''a''
+million ways in a single ''minute,''
+
+standing stiff as rigor mortis ''there''
+in the corner where no one ''is''
+watching, watching for every ''time''
+
+they laugh and turn away ''for''
+I can't help but calculate ''decisions''
+like a survivor, shipwrecked ''and''
+
+stranded in a sea of ''revisions''
+of choices never made ''which''
+haunt me nonetheless, ''a''
+
+coffin where even a ''minute''
+mistake can lead to ends that ''will''
+undo me. Let me do them in ''reverse''.
+
+[[Revise. | city]]
+[[Credits]]
+<</if>>
+
+:: Credits [notimer meta]
+Writing by [[Aster Fialla|https://asterfialla.com]] and [[T.S. Eliot|https://www.poetryfoundation.org/poets/t-s-eliot]] with primary inspiration from:
+* [[The Love Song of J. Alfred Prufrock | https://jpellegrino.com/teaching/eliot-prufrock.html]]
+* [[The Waste Land | https://wasteland.windingway.org/poem#293]]
+* [[Rhapsody on a Windy Night | https://www.poetryfoundation.org/poems/44215/rhapsody-on-a-windy-night]]
+* A smattering of references to other poems.
+
+I (Aster) wrote the poem on the title page.
+
+[[Story seed|https://itch.io/jam/seed-comp-1-planting/rate/1825494]] by [[Amanda Walker|https://amanda-walker.itch.io/]] for [[SeedComp|https://itch.io/jam/seed-comp-1-growing]] under the CC-BY-NC license
+
+Timer macro and Delayed Text code by [[HiEv|https://qjzhvmqlzvoo5lqnrvuhmg.on.drv.tw/UInv/Sample_Code.html#Main%20Menu]]
+
+Thank you to my bug testers: Josh Grams, Austin Auclair, and B. Murchhona!
+
+This is version 1 of a bigger game that will have seven places to explore, which I'll release ~someday!
+
+[[Revise. | city][$places.city = false]]
+
+
+
+
+:: city [city timerstart]
+<<set $cityvars.mylae = false>><<set $cityvars.hurryup = false>>\
+I walk along the cobblestone <<tlink "street" "streets">> of London, watching the <<tlink "evening">>  fall before me. Brown <<tlink "buildings">> crowd together in the purpling light, and the <<tlink "moon">> feebly hangs in the far distance.
+
+I consider where to lead <<tlink "you">> next.
+
+
+
+:: street [city]
+<<if $cityvars.mylae == false>>\
+    It's just shy of six o'clock, and the <<tlink "streetlamps">> are starting to be lit. The scent of <<tlink "chestnuts">> is just barely detectable within the heavy <<tlink "fog">>, and smoke drifts from <<tlink "apartment" "apartments">> high above us.
+
+    The streets are nearly-deserted at this time-- most people have gone home for the  <<tlink "evening">> or found some <<tlink "hotel">> to stay the night. Still, I spot <<tlink "two men">> who are in a <<tlink "conversation">> on the corner near the oyster <<tlink "bar">>, a <<tlink "dog">> accompanying them.
+<<else>>\
+    It's a little past six o'clock, and the <<tlink "streetlamps">> are all lit. The scent of <<tlink "chestnuts">> is just barely detectable within the heavy <<tlink "fog">>, and smoke drifts from <<tlink "apartment" "apartments">> high above us.
+
+    The streets are deserted at this time-- most people have gone home for the found some <<tlink "hotel">> to stay the night. Even the corner near the oyster <<tlink "bar">> is unoccupied.
+<</if>>
+
+:: chestnuts [city]
+Who could be roasting chestnuts on the <<tlink "street" "streets">>? The scent is too faint to follow through the sulfurous <<tlink "fog">>, though it's really the only appealing smell that can be found around here.
+
+:: evening [city]
+The evening splays out on the stone slab of the <<tlink "street" "streets">> behind the uneven <<tlink "buildings" "buildings'">> skyline, growing cold and numb from the <<tlink "fog" "foggy">> fumes that fill the air. Its jaundiced yellow, withered rose, and sterile gray colors mix together much like a bruise. The sun has slipped into unconsciousness below the horizon, while the <<tlink "moon">> drags herself from a shadowed bed.
+
+:: buildings [city]
+<<if $cityvars.mylae == false>>\
+The shops and <<tlink "apartment" "apartments">> close in, a coffin lid sliding into place over the blackened path, the pallid faces on the <<tlink "street" "streets">>. Two familiar retreats bend out in the gloom: the <<tlink "hotel">> and the oyster <<tlink "bar">>. I can hear the muttering of patrons within both haunts, and there might be the whine of a <<tlink "mandolin">> from somewhere nearby.
+
+As well, <<tlink "two men">> and a <<tlink "dog">> mutter in <<tlink "conversation">> on the corner.
+<<else>>
+The shops and <<tlink "apartment" "apartments">> close in, a coffin lid sliding into place over the blackened <<tlink "street" "streets">>. Two familiar retreats bend out in the gloom: the <<tlink "hotel">> and the oyster <<tlink "bar">>. I can hear the muttering of patrons within both haunts, and there might be the whine of a <<tlink "mandolin">> from somewhere nearby.
+<</if>>
+
+:: mandolin [city]
+The <<tlink "fog">> is doing a good job of muting it, but the hints of someone plucking away at a mandolin can be caught on the breeze, if I strain my ears for the highest notes. Slightly-off key, the tune could perhaps be in the general direction of the oyster <<tlink "bar">>, but really could be from anywhere within the meandering <<tlink "street" "streets">>. It's hard to say for sure.
+
+:: moon [city]
+The moon has been caught in a sleepy half-wink tonight, so old that she forgets to brighten the cobblestone <<tlink "street" "streets">> much at all. Alas, we must rely on the <<tlink "streetlamps">> to guide us.
+
+:: streetlamps [city]
+The streetlamps sputter as the gas within their bulbs coughs out light. They helpfully point out the missing cobblestones in the <<tlink "street" "streets">>, the alleyways to avoid, and the crumbling brick of the surrounding <<tlink "buildings">>.
+
+:: you [city]
+You and I walk through the <<tlink "street" "streets">>-- or rather, I lead and you follow. Arguing with me has always been a tedious endeavor, so you have elected not to convince me to turn back home, or to even ask where I might be taking you.
+
+I appreciate you for that.
+
+:: two men [city]
+Two men converse next to the oyster <<tlink "bar">>, illuminated by the <<tlink "streetlamps">>. More accurately, one man with a black eye who looks like a <<tlink "merchant">> talks at another <<tlink "man with a hat">> and a leashed <<tlink "dog">> at his feet. Their <<tlink "conversation">> seems unusual.
+
+:: merchant [city]
+One of this man's eyes is bruised and completely swollen shut, perhaps from a fight in the nearby <<tlink "bar">>. His other eye flicks about the <<tlink "street">>, keeping up his side of the <<tlink "conversation">> with the <<tlink "man with a hat">> in a melodic foreign accent. He is dressed in baggy clothing with his hands in laden <<tlink "pockets">>, bearing an unkempt mustache and beard. Some<<tlink "thing">> is shouldered on his back.
+
+:: thing [city]
+I don't know what the thing on the <<tlink "merchant" "merchant's">> back is. Someone wise once told me she wasn't supposed to see such a thing, so I'm not about to try peeking around it myself, you know. It seems a bad idea.
+
+:: pockets [city]
+The one-eyed <<tlink "merchant" "merchant's">> pockets are stuffed with something that shifts in shape as he moves his hands within them. Actually, it seems to be multiple things rolling about within, such as beads or coins. Whenever one of the things happens to fall out of his pocket and bounce onto the <<tlink "street">>, the <<tlink "dog">> lunges over to wolf it down.
+
+:: man with a hat [city]
+This man is nodding along and shrugging during the <<tlink "conversation">>, or monologue, but otherwise says nothing. He looks elderly, with a pointed white beard and a black, wide-brimmed hat upon his head. He grips the <<tlink "dog" "dog's">> leash tightly in one gloved fist. Occasionally he looks up at the darkening <<tlink "evening">>, gestures to his watch, and attempts to leave, but the <<tlink "merchant">> pulls him back.
+
+:: dog [city]
+An incredibly small yorkshire terrier leashed by the <<tlink "man with a hat">>. Its expression is doleful and dour, which contrasts in an amusing manner with the bow on its head. Whenever a small item slips from the <<tlink "pockets">> of the one-eyed <<tlink "merchant">>, the dog quickly licks it up.
+
+:: conversation [city]
+You can hear the conversation progressing on the other side of the <<tlink "street">>. "Stetson! You who were with me in the ships at Mylae!" @@.delayed;The one-eyed man's accent seems to be from somewhere in the Greek isles-- though it doesn't sound modern to my ears--with a touch of French. "That corpse you planted last year in your garden,@@ @@.delayed;has it begun to sprout? Will it bloom this year? Or has the sudden frost disturbed its bed?"@@
+
+@@.delayed;The dog begins to yap and growl at this, until Stetson has to pull him back.
+
+The merchant laughs.@@ @@.delayed;"Oh keep the dog far hence that's friend to men, or with his nails he'll dig it up again!@@
+
+@@.delayed;Finally, Stetson clears his throat loudly-- audible even from this distance-- tips his hat, and turns to go. His dog follows dutifully.
+
+As Stetson briskly walks down the street, the merchant follows, waving and calling after him.@@ @@.delayed;"You! Hypocrite lecteur! Mon semblable-- mon frère!" He is studiously ignored.@@
+
+@@.delayed;Soon, the corner next to the oyster <<tlink "bar">> is unoccupied.<<set $cityvars.mylae = true>>@@
+
+:: fog [city]
+The fog prowls along the <<tlink "street" "streets">> and smothers <<tlink "buildings">> with a foul, rotten-egg stench. It's nearly thick enough to caress under the fingers.
+
+:: apartment [city]
+Tenements crammed between tenements. Smoke rises and falls in puffs from an open window, and through it, a bent <<tlink "silhouette">> is almost visible.
+
+:: silhouette [city]
+The smoke dissipates periodically into the <<tlink "evening">> air, and as it thins, the silhouette asserts into the shape of a man, partially-slumped out of the window. His shirt sleeves are stained with dirt and rolled above his forearms. One arm props him on the sill as he surveys the <<tlink "street">>, and the other loosely holds a <<tlink "pipe">>.
+
+:: pipe [city]
+A warm tobacco smell is the tip-off for the thin curved shape hidden in the smoke-- a wooden pipe held by a <<tlink "silhouette" "silhouetted">> man.
+
+
+
+:: sawdust [bar]
+This <<tlink "bar">> isn't the classiest place, as proven by the heavily trampled sawdust. Tracked footprints that reveal the wooden floor beneath are ghost-like signs of <<if $cityvars.hurryup== false>>the <<tlink "patrons" "patrons'">>\<<else>>past patrons'<</if>> presence, but they're quickly exorcised by the shoes of harried waiters. The fragments of <<tlink "oyster">> shells, stains left by spilled <<tlink "drinks">> and more lie embedded in the sifting dust.
+
+:: oyster [bar]
+The <<tlink "bar">> has oysters on ice in a display case, their shells gaping as if surprised at where they've ended up. A strong briny smell, which is released as each oyster is cracked open, soaks into the walls and <<tlink "sawdust">> floor.
+
+:: drinks [bar]
+<<if $cityvars.hurryup == false>>Cocktails and beer are being served to various <<tlink "patrons">>. Some have already baptized the <<tlink "sawdust">> with their sloshing, less-than-holy spirits.<<else>>The stains of less-than-holy spirits seep into the <<tlink "sawdust">>.<</if>>
+
+:: chatter [bar]
+<<set $cityvars.hurryup = true>>\
+At the <<tlink "bar">>, a lady is loudly and animatedly acting out the conversation she had with her friend about another conversation. Some of the people around her nearly slip off their barstools as they lean in to listen. @@.delayed;"When Lil's husband got demobbed, I said--I didn't mince my words, I said to her myself,@@
+
+@@.delayed;"'Now Albert's coming back, make yourself a bit smart. He'll want to know what you done with that money he gave you to get yourself some teeth.'"@@
+
+@@.delayed;Someone speaks in the uptones of a question and she nods vigorously. "He did, I was there!" And continues:
+
+"'You have them all out, Lil, and get a nice set.'@@
+
+@@.delayed;"He said,'--" here her voice drops as she imitates Albert-- "'//'I swear, I can't bear to look at you.'//
+
+"'And no more can't I', I said, @@ @@.delayed;'and think of poor Albert! He's been in the army four years, he wants a good time, and if you don't give it him, there's others will', I said."@@
+
+@@.delayed;The woman preens as the surrounding people murmer in agreement. Her voice pitches up, breathy and shrill: "'Oh is there?' she said.@@
+
+@@.delayed;"'Something o'that,' I said.
+
+"'Then I'll know who to thank,' she said, and gave me a straight look."@@
+
+@@.delayed;Everyone laughs at the joke, the men shoving and slapping each other on the back and the women tittering with their hands lifted to their mouths.@@
+
+@@.delayed;"'If you don't like it you can get on with it,' I said. 'Others can pick and choose if you can't. But if Albert makes off, it won't be for lack of telling.@@ @@.delayed;You ought to be ashamed, I said, to look so antique." The woman shakes her head in disapproval. "And her only thirty-one."@@
+
+@@.delayed;"'I can't help it', she said, pulling a long face. 'It's them pills I took, to bring it off', she said."@@
+
+@@.delayed;To the audience, the lady adds, "She's had five already, and nearly died of young George." This elicits more head shaking and clicked tongues.@@ @@.delayed;Continuing as Lil:
+
+"'The chemist said it would be all right, but I've never been the same.'@@
+
+@@.delayed;'You are a proper fool,' I said. 'Well, if Albert won't leave you alone, there it is,' I said, 'What you get married for if you don't want children?'"@@
+
+@@.delayed;At this point, the barman starts to shoo her and the other ones away, who seem to have overstayed their welcome.@@ @@.delayed;She continues, undeterred:
+
+"Well, that Sunday Albert was home, they had a hot gammon, and they asked me in to dinner, to get the beauty of it hot--"@@
+
+@@.delayed;The barman's voice raises, repeating his call for her to leave. Finally, she gets up, and the other people around her follow suit. They exchange hugs and kisses, to the barman's irritation.@@
+
+@@.delayed; "Goonight Bill."
+
+"Goonight Lou."
+
+"Goonight May."
+
+"Goonight."
+
+"Ta ta."
+
+"Goonight."
+
+"Goonight.@@
+
+@@.delayed;The barman's face smooths out, obsequious and pleasing, as he ushers the group out the door and onto the <<tlink "street">>. "Good night, ladies. Good night sweet ladies. Good night, good night."@@
+
+:: patrons [bar]
+These people-- factory workers, sailors, laborers and their wives, are covered in grime and fatigue, but look cheery nonetheless. It could be the <<tlink "drinks">> or the delicious <<tlink "oyster" "oysters">> that brighten their spirits-- or more likely, it could be the lady gesticulating wildly and <<tlink "chatter" "chattering">> about a recent interaction of hers.
+
+:: bar [bar]
+The pungent odor of <<tlink "oyster" "oysters">> is, of course, what hits the senses first. Dim lanterns hang from a drooping ceiling and <<tlink "sawdust">> buries the floor. <<if $cityvars.hurryup == false>>Bar <<tlink "patrons">> laugh and jostle each other on their stools, tipping <<tlink "drinks">> into mouths dried from endless <<tlink "chatter">>.<<else>>There are a few unfinished <<tlink "drinks">> left on the bar.<</if>> Outside on the <<tlink "street">>, the cooling <<tlink "evening">> awaits.
+
+
+
+:: hotel [hotel]
+There's been a valiant attempt to make the lobby look presentable for new guests but it hasn't quite succeeded: not even the most vigorous dusting or furious polishing could obscure the peeling <<tlink "walls">> or the ashy odor of old <<tlink "cigarettes">> on the crunching <<tlink "carpet">>. A <<tlink "clerk">> sits at the <<tlink "counter">> but he is too busy reading a book to notice the presence of others.
+
+There seems to be a <<tlink "commotion">> of sorts down the hall where the hotel rooms lie. The dusky <<tlink "evening">> awaits our return to the <<tlink "street" "streets">>.
+
+:: walls [hotel]
+The paint on the <<tlink "hotel">> walls is peeling down in hangnail strips and the brick behind is wet for whatever reason. The few places the once-whitewash still covers are cracked and flaking like parched skin ready to break.
+
+:: cigarettes [hotel]
+Stubby worms of cigarettes  in various states of flatness are scattered on top of the <<tlink "carpet">>. Since the ashtray on the <<tlink "counter">> is already brimming with ash, there aren't many other places in the <<tlink "hotel">> lobby to discard them.
+
+:: carpet [hotel]
+The <<tlink "cigarettes">> are resting atop the carpet that poorly blankets the <<tlink "hotel">> floors, rather than nestling within its threads. This would be curious if the carpet were not completely hardened from various spills and stains, but it is, so the phenomenon is quite understandable.
+
+:: clerk [hotel]
+The clerk who should ostensibly be greeting <<tlink "hotel">> guests is idly picking his nose and leaning his back on the <<tlink "counter">>, enraptured in a worn penny dreadful about pearls and romance. He doesn't look up, even as the flakes of the painted <<tlink "walls">> sprinkle his head and the raucous <<tlink "commotion">> rises in pitch beyond him.
+
+:: counter [hotel]
+The sagging counter has an ashtray spilling over with <<tlink "cigarettes">>, a rusty bell to ring the <<tlink "clerk">> with-- though he's right there, so there's no need, really-- and a sign that reads //"1 night = 6d"//.
+
+:: commotion [hotel]
+A <<tlink "shriek">> bursts erratically from behind the <<tlink "door">> of one room, which is cracked open barely enough to peer inside. Several <<tlink "ladies">> gather in the corridor right outside, looking scandalized. The <<tlink "hotel">> lobby is behind us, an escape route.
+
+:: shriek [hotel]
+I cannot say whether the hitching, staccato shriek from behind the <<tlink "door">> is a fit of laughter or a fit of something more unnerving. Each shriek pierces through the corridor and shoots its way to the <<tlink "hotel">> lobby, but falls short before reaching the outside world.
+
+:: ladies [hotel]
+The ladies, in varying states of underclothing and undress, alternate between peeking through the <<tlink "door">> crack and whispering to each other in shock. One woman, much older than the others, glances down toward the <<tlink "hotel">> lobby with a pained expression. Clearly she knows how this looks.
+
+:: door [hotel]
+Though the crack in the door only shows a sliver of the room within, the room seems so small that I doubt there's much else to see. The surrounding <<tlink "ladies">> jostle in the <<tlink "hotel">> corridor for a look-see as well.
+
+Inside, the bare legs of a <<tlink "woman">> scissor back and forth upon an otherwise empty bed. Behind the legs, a <<tlink "man">> shaves in the washroom. A dead potted <<tlink "plant">> curls up on the shuttered windowsill above.
+
+:: plant [hotel]
+A potted plant crumples and curls on the windowsill of the room beyond the <<tlink "door">>, partially obscured by the <<tlink "woman" "woman's">> convulsing body. Its withered petals clump together for company, indicating it might have once been a hyacinth.
+
+:: woman [hotel]
+If the woman on the bed isn't laughing, she might need medical attention. Her legs are covered in red, ring-shaped bites. Her other body parts can merely be glimpsed at due to her rocking and <<tlink "shriek" "shrieking">>, but the <<tlink "ladies">> are carefully avoiding pushing the <<tlink "door">> open further. The <<tlink "man">> continues his work unperturbed in the washroom.
+
+:: man [hotel]
+A hirsute man, visible in the reflection of the washroom's grimy mirror, has covered his jaws in shaving cream and is studiously removing his beard hair with a straight blade. His hand is calm and steady despite the <<tlink "shriek" "shrieks">> behind him from the <<tlink "woman">> on the bed, and his eyes stare through the mirror and past the crack in the <<tlink "door">>.
+
+
+
+:: script [script]
+UIBar.destroy()
+
+Config.addVisitedLinkClass = true;
+
+/* Delayed Text code - Start - by HiEv*/
+$(document).on(':passagerender', function (ev) {
+	// Find all elements containing the delayed class.
+	var elems = $(ev.content).find('.delayed');
+	// Appearance delay (in milliseconds) between each delayed text block.
+	var delay = 2000; // 2 second fade-in
+	if (elems.length > 0) {
+		elems.each(function (i) {
+			$(this)
+				.delay(delay * (i + 1))
+				.fadeTo(delay, 1);
+		});
+	}
+});
+/* Delayed Text code - End */
+
+/* Boldtext code */
+$(document).on(':passagerender', function (ev) {
+	// Find all elements containing the endwords class.
+	var elems = $(ev.content).find('.endwords');
+	// Appearance delay (in milliseconds) between each delayed text block.
+	var delay = 500; // half second change
+	if (elems.length > 0) {
+		elems.each(function (i) {
+			$(this)
+				.delay(delay * (i + 1))
+				.animate({
+					fontWeight: '700'
+				});
+		});
+	}
+});
+
+
+:: style [stylesheet]
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;1,400;1,700&display=swap');
+
+
+html {
+    font-family: 'Gentium Book Plus', 'Garamond', 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+
+#passages {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 40em;
+    height: 50vh;
+}
+
+
+.passage {
+position: relative;
+margin: auto;
+padding-bottom: 2.5em;
+}
+
+
+a {
+    font-weight: bolder;
+}
+
+
+
+a.link-broken {
+    color: red;
+}
+
+
+a.link-visited {
+    font-style: italic;
+}
+
+
+/* delayed text */
+.delayed {
+    opacity: 0;
+}
+
+
+/* bigger reverse button */
+#reverse {
+    font-size: 20vh;
+}
+
+
+/* stop listening to dialogue */
+.stop {
+    position: relative;
+    bottom: 0;
+}
+
+
+/* start passage */
+body.start,
+body.meta {
+    background-color: rgb(233, 221, 210);
+    color: rgb(16, 8, 8);
+}
+
+
+.passage.start {
+    text-align: right;
+    margin: auto;
+}
+
+
+.passage.start a,
+.passage.meta a {
+    color: rgb(189, 11, 11);
+}
+
+
+.endwords {
+    transition: all 2s linear;
+}
+
+
+.bold {
+    text-shadow: 0 0 5px black;
+    transition: 0.6s;
+}
+
+
+/* city */
+
+
+body.city,
+body.citystart {
+    background-color: rgb(52, 33, 52);
+    color: rgb(255, 255, 215);
+}
+
+
+body.citystart .timer,
+body.city .timer {
+    color:hsla(60, 100%, 92%, 0.25)
+}
+
+
+.passage.city a,
+.passage.citystart a {
+    color: yellow;
+}
+
+
+.passage.city a.link-visited,
+.passage.citystart a.link-visited {
+    color: rgb(222, 148, 12);
+}
+
+
+body.bar {
+    background-color: rgb(199, 165, 154);
+    color: rgb(4, 3, 3);
+}
+
+
+body.bar .timer {
+    color:hsla(0, 26%, 30%, 0.419)
+}
+
+
+.passage.bar a {
+    color: rgb(111, 37, 0);
+}
+
+
+.passage.bar a.link-visited {
+    color: rgb(116, 2, 74);
+}
+
+
+body.hotel {
+    background-color: rgb(100, 38, 60);
+    color: rgb(229, 228, 228);
+}
+
+
+.passage.hotel a {
+    color: rgb(240, 88, 192);
+}
+
+
+.passage.hotel a.link-visited {
+    color: rgb(198, 118, 222);
+}
+
+
+body.hotel .timer {
+    color:rgba(167, 132, 132, 0.482);
+}
+
+/* Timer - Start */
+/*
+    Makes sure that elements stay within the page width - scrollbar width.
+*/
+html, body {
+    width: -webkit-calc(100vw - 16px);
+    width: -moz-calc(100vw - 16px);
+    width: calc(100vw - 16px);
+    min-height: 100%;
+}
+#timer {
+    position: fixed;
+    right: 40px;
+    line-height: 1.55;
+    font-size: 50vh;
+    padding: 0 14px;
+    z-index: -20;
+    bottom: 0;
+}
+
+
+/* Timer - End */
+
+:: reverse [notimer nobr]
+<<silently>>
+<<set $reverse = true>>
+<<set $reversedBefore = true>>
+<<set $places.city = true>>
+<<set _backward = $reversePassages.pop()>>
+<</silently>>
+@@#reverse;[[Reverse. | _backward]]@@
+
+:: tlink [widget nobr]
+<<widget "tlink">>
+	/* functionally a link, but makes writing links easier */
+	<<set _name = _args[0]>>
+	<<if _args[1]>>
+		<<set _plural = _args[1]>>
+		[[_plural | _name][$sec = _seconds]]\
+	<<else>>
+		[[_name][$sec = _seconds]]\
+	<</if>>\
+<</widget>>
+
+:: PassageFooter [nobr]
+/* starts countdown on timerstart tagged passages and continues it on every passage that's not tagged "notimer" */
+<<if tags().includes("timerstart") == true>>
+    <<set $reversePassages.push(passage())>>
+    <<if $reverse == false>>
+        <<countdownTimer 61 'reverse'>>
+        /* reversePassages are to "rewind" */
+    <<elseif $reverse == true>>
+        <<timed 500ms t8n>>
+            <<goto "Start">>
+        <</timed>>
+    <</if>>
+
+<<elseif tags().includes("notimer") == true>>
+    <<run forget("countdown")>>
+
+<<elseif tags().includes("notimer", "timerstart") != true>>
+    <<if $reverse == false>>
+        <<if setup.countdown>>
+            <<set _diff = Math.floor($sec - (((new Date()) - setup.countdown.startTime) / 1000))>>
+            <<countdownTimer _diff "reverse">>
+            /* kinda shoddy but basically if you refresh it doesn't show an error it just resets the timer (i hope people don't refresh :( ) */
+        <<elseif !setup.countdown>>
+            <<countdownTimer $sec 'reverse'>>
+        <</if>>
+        <<set $reversePassages.push(passage())>>
+    <<elseif $reverse == true>>
+        /* 'rewinds' passages back to starting passage */
+        <<set _backward = $reversePassages.pop()>>
+        <<timed 500ms t8n>>
+            <<goto _backward>>
+        <</timed>>
+    <</if>>
+<</if>>
+
+:: StoryInit
+/* to rewind within a place */
+<<set $reversePassages = []>>
+/* to do total rewind at the end */
+<<set $places = {"city": false, "cat": false, "room": false, "tea": false, "hamlet": false, "beach": false, "ocean": false}>>
+
+/* city variables */
+<<set $cityvars = {"mylae": false, "hurryup": false}>>
+
+:: timer [widget nobr]
+/* by HiEv */
+/* <<countdownTimer>> Widget - Start */
+<<widget "countdownTimer">>
+	<<set _seconds = $args[0]>>
+	<<set _minutes = Math.floor(_seconds / 60)>>
+	<<set _replacementPassage = $args[1]>>
+	<div id="timer" class="timer">_minutes:<<= (_seconds - (_minutes * 60)).toString().padStart(2, '0')>></div><<script>>
+	if (!recall("countdown", undefined)) {
+		setup.countdown = { startTime: new Date(), lastStr: "", passage: passage() };
+		memorize("countdown", setup.countdown);
+	} else {
+		setup.countdown = recall("countdown");
+		if (setup.countdown.passage !== passage()) {
+			setup.countdown = { startTime: new Date(), lastStr: "", passage: passage() };
+			memorize("countdown", setup.countdown);
+		}
+	}
+	setup.countdown.intervalID = setInterval(function () {
+		if (setup.countdown.passage !== passage()) {
+			clearInterval(setup.countdown.intervalID);
+			forget("countdown");
+			setup.countdown.passage = "";
+		} else {
+			var curtime = new Date(), str, seconds = State.temporary.seconds;
+			var diff = Math.floor(seconds - ((curtime - setup.countdown.startTime) / 1000)), min = Math.floor(diff / 60);
+			if ((diff >= 0) && (diff < seconds)) {
+				if ($("#timer").length) {
+					str = min + ":" + (diff - (min * 60)).toString().padStart(2, '0');
+					if (str != setup.countdown.lastStr) {
+						$("#timer").empty().wiki(str);
+						setup.countdown.lastStr = str;
+					}
+				}
+			}
+			if (diff < 0) {
+				clearInterval(setup.countdown.intervalID);
+				forget("countdown");
+				$("#passages div.passage").empty().wiki('<<include "' + State.temporary.replacementPassage + '">>');
+				delete setup.countdown.passage;
+			}
+		}
+	}, 200);
+	<</script>>
+<</widget>>
+/* <<countdownTimer>> Widget - End */
+

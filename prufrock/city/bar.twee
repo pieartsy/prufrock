@@ -1,0 +1,68 @@
+:: bar [bar]
+The pungent odor of <<tlink "oyster" "oysters">> is, of course, what hits the senses first. Dim lanterns hang from a drooping ceiling and <<tlink "sawdust">> buries the floor. <<if $cityvars.hurryup == false>>Bar <<tlink "patrons">> laugh and jostle each other on their stools, tipping <<tlink "drinks">> into mouths dried from endless <<tlink "chatter">>.<<else>>There are a few unfinished <<tlink "drinks">> left on the bar.<</if>> Outside on the <<tlink "street">>, the cooling <<tlink "evening">> awaits.
+
+:: sawdust [bar]
+This <<tlink "bar">> isn’t the classiest place, as proven by the heavily trampled sawdust. Tracked footprints that reveal the wooden floor beneath are ghost-like signs of <<if $cityvars.hurryup== false>>the <<tlink "patrons" "patrons’">>\<<else>>past patrons’<</if>> presence, but they’re quickly exorcised by the shoes of harried waiters. The fragments of <<tlink "oyster">> shells, stains left by spilled <<tlink "drinks">> and more lie embedded in the sifting dust.
+
+:: oyster [bar]
+The <<tlink "bar">> has oysters on ice in a display case, their shells gaping as if surprised at where they’ve ended up. A strong briny smell, which is released as each oyster is cracked open, soaks into the walls and <<tlink "sawdust">> floor.
+
+:: drinks [bar]
+<<if $cityvars.hurryup == false>>Cocktails and beer are being served to various <<tlink "patrons">>. Some have already baptized the <<tlink "sawdust">> with their sloshing, less-than-holy spirits.<<else>>The stains of less-than-holy spirits seep into the <<tlink "sawdust">>.<</if>>
+
+:: chatter [bar]
+<<set $cityvars.hurryup = true>>\
+At the <<tlink "bar">>, a lady is loudly and animatedly acting out the conversation she had with her friend about another conversation. Some of the people around her nearly slip off their barstools as they lean in to listen. @@.delayed;“When Lil’s husband got demobbed, I said—I didn’t mince my words, I said to her myself,@@
+
+@@.delayed;“‘Now Albert’s coming back, make yourself a bit smart. He’ll want to know what you done with that money he gave you to get yourself some teeth.’”@@
+
+@@.delayed;Someone speaks in the uptones of a question and she nods vigorously. "He did, I was there!” And continues:
+
+“‘You have them all out, Lil, and get a nice set.’@@
+
+@@.delayed;“He said,’—” here her voice drops as she imitates Albert— “‘//‘I swear, I can’t bear to look at you.’//
+
+“‘And no more can’t I’, I said, @@ @@.delayed;‘and think of poor Albert! He’s been in the army four years, he wants a good time, and if you don’t give it him, there’s others will’, I said.”@@
+
+@@.delayed;The woman preens as the surrounding people murmer in agreement. Her voice pitches up, breathy and shrill: “‘Oh is there?’ she said.@@
+
+@@.delayed;“‘Something o’that,’ I said.
+
+“‘Then I’ll know who to thank,’ she said, and gave me a straight look.”@@
+
+@@.delayed;Everyone laughs at the joke, the men shoving and slapping each other on the back and the women tittering with their hands lifted to their mouths.@@
+
+@@.delayed;“‘If you don’t like it you can get on with it,’ I said. ‘Others can pick and choose if you can’t. But if Albert makes off, it won’t be for lack of telling.@@ @@.delayed;You ought to be ashamed, I said, to look so antique.” The woman shakes her head in disapproval. “And her only thirty-one.”@@
+
+@@.delayed;“‘I can’t help it’, she said, pulling a long face. ‘It’s them pills I took, to bring if off’, she said.”@@
+
+@@.delayed;To the audience, the lady adds, “She’s had five already, and nearly died of young George.” This elicits more head shaking and clicked tongues.@@ @@.delayed;Continuing as Lil:
+
+“‘The chemist said it would be all right, but I’ve never been the same.’@@
+
+@@.delayed;‘You are a proper fool,’ I said. ‘Well, if Albert won’t leave you alone, there it is,’ I said, ‘What you get married for if you don’t want children?’”@@
+
+@@.delayed;At this point, the barman starts to shoo her and the other ones away, who seem to have overstayed their welcome.@@ @@.delayed;She continues, undeterred:
+
+“Well, that Sunday Albert was home, they had a hot gammon, and they asked me in to dinner, to get the beauty of it hot—”@@
+
+@@.delayed;The barman’s voice raises, repeating his call for her to leave. Finally, she gets up, and the other people around her follow suit. They exchange hugs and kisses, to the barman’s irritation.@@
+
+@@.delayed; “Goonight Bill.”
+
+“Goonight Lou.”
+
+“Goonight May.”
+
+“Goonight.”
+
+“Ta ta.”
+
+“Goonight.”
+
+“Goonight.@@
+
+@@.delayed;The barman’s face smooths out, obsequious and pleasing, as he ushers the group out the door and onto the <<tlink "street">>. “Good night, ladies. Good night sweet ladies. Good night, good night.”@@
+
+:: patrons [bar]
+These people— factory workers, sailors, laborers and their wives, are covered in grime and fatigue, but look cheery nonetheless. It could be the <<tlink "drinks">> or the delicious <<tlink "oyster" "oysters">> that brighten their spirits— or more likely, it could be the lady gesticulating wildly and <<tlink "chatter" "chattering">> about a recent interaction of hers.

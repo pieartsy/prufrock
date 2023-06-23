@@ -3,7 +3,7 @@
 <<if tags().includes("timerstart") == true>>
     <<set $reversePassages.push(passage())>>
     <<if $reverse == false>>
-        <<countdownTimer 60 'reverse'>>
+        <<countdownTimer 61 'reverse'>>
         /* reversePassages are to "rewind" */
     <<elseif $reverse == true>>
         <<timed 500ms t8n>>

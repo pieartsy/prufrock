@@ -1,0 +1,42 @@
+:: hotel [hotel]
+There’s been a valiant attempt to make the lobby look presentable for new guests but it hasn’t quite succeeded: not even the most vigorous dusting or furious polishing could obscure the peeling <<tlink "walls">> or the ashy odor of old <<tlink "cigarettes">> on the crunching <<tlink "carpet">>. A <<tlink "clerk">> sits at the <<tlink "counter">> but he is too busy reading a book to notice the presence of others.
+
+There seems to be a <<tlink "commotion">> of sorts down the hall where the hotel rooms lie. The dusky <<tlink "evening">> awaits our return to the <<tlink "street" "streets">>.
+
+:: walls [hotel]
+The paint on the <<tlink "hotel">> walls is peeling down in hangnail strips and the brick behind is wet for whatever reason. The few places the once-whitewash still covers are cracked and flaking like parched skin ready to break.
+
+:: cigarettes [hotel]
+Stubby worms of cigarettes  in various states of flatness are scattered on top of the <<tlink "carpet">>. Since the ashtray on the <<tlink "counter">> is already brimming with ash, there aren’t many other places in the <<tlink "hotel">> lobby to discard them.
+
+:: carpet [hotel]
+The <<tlink "cigarettes">> are resting atop the carpet that poorly blankets the <<tlink "hotel">> floors, rather than nestling within its threads. This would be curious if the carpet were not completely hardened from various spills and stains, but it is, so the phenomenon is quite understandable.
+
+:: clerk [hotel]
+The clerk who should ostensibly be greeting <<tlink "hotel">> guests is idly picking his nose and leaning his back on the <<tlink "counter">>, enraptured in a worn penny dreadful about pearls and romance. He doesn’t look up, even as the flakes of the painted <<tlink "walls">> sprinkle his head and the raucous <<tlink "commotion">> rises in pitch beyond him.
+
+:: counter [hotel]
+The sagging counter has an ashtray spilling over with <<tlink "cigarettes">>, a rusty bell to ring the <<tlink "clerk">> with— though he’s right there, so there’s no need, really— and a sign that reads //“1 night = 6d”//.
+
+:: commotion [hotel]
+A <<tlink "shriek">> bursts erratically from behind the <<tlink "door">> of one room, which is cracked open barely enough to peer inside. Several <<tlink "ladies">> gather in the corridor right outside, looking scandalized. The <<tlink "hotel">> lobby is behind us, an escape route.
+
+:: shriek [hotel]
+I cannot say whether the hitching, staccato shriek from behind the <<tlink "door">> is a fit of laughter or a fit of something more unnerving. Each shriek pierces through the corridor and shoots its way to the <<tlink "hotel">> lobby, but falls short before reaching the outside world.
+
+:: ladies [hotel]
+The ladies, in varying states of underclothing and undress, alternate between peeking through the <<tlink "door">> crack and whispering to each other in shock. One woman, much older than the others, glances down toward the <<tlink "hotel">> lobby with a pained expression. Clearly she knows how this looks.
+
+:: door [hotel]
+Though the crack in the door only shows a sliver of the room within, the room seems so small that I doubt there’s much else to see. The surrounding <<tlink "ladies">> jostle in the <<tlink "hotel">> corridor for a look-see as well.
+
+Inside, the bare legs of a <<tlink "woman">> scissor back and forth upon an otherwise empty bed. Behind the legs, a <<tlink "man">> shaves in the washroom. A dead potted <<tlink "plant">> curls up on the shuttered windowsill above. 
+
+:: plant [hotel]
+A potted plant crumples and curls on the windowsill of the room beyond the <<tlink "door">>, partially obscured by the <<tlink "woman" "woman’s">> convulsing body. Its withered petals clump together for company, indicating it might have once been a hyacinth.
+
+:: woman [hotel]
+If the woman on the bed isn’t laughing, she might need medical attention. Her legs are covered in red, ring-shaped bites. Her other body parts can merely be glimpsed at due to her rocking and <<tlink "shriek" "shrieking">>, but the <<tlink "ladies">> are carefully avoiding pushing the <<tlink "door">> open further. The <<tlink "man">> continues his work unperturbed in the washroom.
+
+:: man [hotel]
+A hirsute man, visible in the reflection of the washroom’s grimy mirror, has covered his jaws in shaving cream and is studiously removing his beard hair with a straight blade. His hand is calm and steady despite the <<tlink "shriek" "shrieks">> behind him from the <<tlink "woman">> on the bed, and his eyes stare through the mirror and past the crack in the <<tlink "door">>.

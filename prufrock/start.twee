@@ -1,6 +1,7 @@
 :: Start [start notimer]
 <<set $reversePassages = ['Start']>>\
-<<if $places.city == false>>\
+<<set $reverse = false>>\
+<<if visited() == 1>>\
 Let me reverse the clocks, the hours in
 which I die a million times and a
 million ways in a single minute,
@@ -20,8 +21,7 @@ haunt me nonetheless, a
 coffin where even a minute
 mistake can lead to ends that will
 undo me. Let me do them in [[reverse | city]].
-<<elseif $places.city == true>>\
-<<set $reverse = false>>\
+<<elseif visited() == 2>>\
 Let me reverse the clocks, the hours @@.endwords;in@@
 which I die a million times and @@.endwords;a@@
 million ways in a single @@.endwords;minute,@@
@@ -42,18 +42,42 @@ coffin where even a @@.endwords;minute@@
 mistake can lead to ends that @@.endwords;will@@
 undo me. Let me do them in @@.endwords;reverse.@@
 <<timed 9s t8n>>
-[[Revise. | city][$places.city = false]]
+[[Revise. | city]]
 [[Credits]]
 <<next 50ms>>
 /* scrolls down to the bottom to show the revise and credits */
 <<run $('.passage > *:last-child').get(0).scrollIntoView({behavior: 'smooth'})>>
 <</timed>>
+<<elseif visited() >= 3>>\
+<<set $reverse = false>>\
+Let me reverse the clocks, the hours ''in''
+which I die a million times and ''a''
+million ways in a single ''minute,''
+
+standing stiff as rigor mortis ''there''
+in the corner where no one ''is''
+watching, watching for every ''time''
+
+they laugh and turn away ''for''
+I can't help but calculate ''decisions''
+like a survivor, shipwrecked ''and''
+
+stranded in a sea of ''revisions''
+of choices never made ''which''
+haunt me nonetheless, ''a''
+
+coffin where even a ''minute''
+mistake can lead to ends that ''will''
+undo me. Let me do them in ''reverse''.
+
+[[Revise. | city]]
+[[Credits]]
 <</if>>
 
 :: reverse [notimer nobr]
 <<silently>>
 <<set $reverse = true>>
-<<set $places.city = true>>
+<<set $reversedBefore = true>>
 <<set _backward = $reversePassages.pop()>>
 <</silently>>
 @@#reverse;[[Reverse. | _backward]]@@
