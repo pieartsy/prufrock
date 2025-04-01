@@ -321,8 +321,7 @@ html, body {
 	bottom: 0;
 }
 
-/* Timer - End */</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "script.js" */
-UIBar.destroy()
+/* Timer - End */</style><script role="script" id="twine-user-script" type="text/twine-javascript">UIBar.destroy()
 
 Config.addVisitedLinkClass = true;
 
@@ -357,28 +356,7 @@ $(document).on(':passagerender', function (ev) {
 				});
 		});
 	}
-});
-/* twine-user-script #2: "settings.js" */
-// /*=================THEME=================*/
-//         // HC = "high contrast"
-//         // LC = "low contrast"
-// var settingThemeHandler = function () {
-//     if (settings.theme) { // is true
-//         $("html").addClass("HC");
-//         $("html").removeClass("LC");
-//     }
-//     else { // is false
-//         $("html").addClass("LC");
-//         $("html").removeClass("HC");
-//     }
-// };
-
-// Setting.addToggle("theme", {
-//     label    : "A more accessible color scheme and timer placement.",
-//     default  : false,
-//     onInit   : settingThemeHandler,
-//     onChange : settingThemeHandler
-// });</script><tw-passagedata pid="1" name="bar" tags="bar" position="100,100" size="100,100">The pungent odor of &lt;&lt;tlink &quot;oyster&quot; &quot;oysters&quot;&gt;&gt; is, of course, what hits the senses first. Dim lanterns hang from a drooping ceiling and &lt;&lt;tlink &quot;sawdust&quot;&gt;&gt; buries the floor. &lt;&lt;if $cityvars.hurryup == false&gt;&gt;Bar &lt;&lt;tlink &quot;patrons&quot;&gt;&gt; laugh and jostle each other on their stools, tipping &lt;&lt;tlink &quot;drinks&quot;&gt;&gt; into mouths dried from endless &lt;&lt;tlink &quot;chatter&quot;&gt;&gt;.&lt;&lt;else&gt;&gt;There are a few unfinished &lt;&lt;tlink &quot;drinks&quot;&gt;&gt; left on the bar.&lt;&lt;/if&gt;&gt; Outside on the &lt;&lt;tlink &quot;street&quot;&gt;&gt;, the cooling &lt;&lt;tlink &quot;evening&quot;&gt;&gt; awaits.</tw-passagedata><tw-passagedata pid="2" name="sawdust" tags="bar" position="225,100" size="100,100">This &lt;&lt;tlink &quot;bar&quot;&gt;&gt; isn’t the classiest place, as proven by the heavily trampled sawdust. Tracked footprints that reveal the wooden floor beneath are ghost-like signs of &lt;&lt;if $cityvars.hurryup== false&gt;&gt;the &lt;&lt;tlink &quot;patrons&quot; &quot;patrons’&quot;&gt;&gt;\&lt;&lt;else&gt;&gt;past patrons’&lt;&lt;/if&gt;&gt; presence, but they’re quickly exorcised by the shoes of harried waiters. The fragments of &lt;&lt;tlink &quot;oyster&quot;&gt;&gt; shells, stains left by spilled &lt;&lt;tlink &quot;drinks&quot;&gt;&gt; and more lie embedded in the sifting dust.</tw-passagedata><tw-passagedata pid="3" name="oyster" tags="bar" position="350,100" size="100,100">The &lt;&lt;tlink &quot;bar&quot;&gt;&gt; has oysters on ice in a display case, their shells gaping as if surprised at where they’ve ended up. A strong briny smell, which is released as each oyster is cracked open, soaks into the walls and &lt;&lt;tlink &quot;sawdust&quot;&gt;&gt; floor.</tw-passagedata><tw-passagedata pid="4" name="drinks" tags="bar" position="475,100" size="100,100">&lt;&lt;if $cityvars.hurryup == false&gt;&gt;Cocktails and beer are being served to various &lt;&lt;tlink &quot;patrons&quot;&gt;&gt;. Some have already baptized the &lt;&lt;tlink &quot;sawdust&quot;&gt;&gt; with their sloshing, less-than-holy spirits.&lt;&lt;else&gt;&gt;The stains of less-than-holy spirits seep into the &lt;&lt;tlink &quot;sawdust&quot;&gt;&gt;.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="chatter" tags="bar" position="600,100" size="100,100">&lt;&lt;set $cityvars.hurryup = true&gt;&gt;\
+});</script><tw-passagedata pid="1" name="bar" tags="bar" position="100,100" size="100,100">The pungent odor of &lt;&lt;tlink &quot;oyster&quot; &quot;oysters&quot;&gt;&gt; is, of course, what hits the senses first. Dim lanterns hang from a drooping ceiling and &lt;&lt;tlink &quot;sawdust&quot;&gt;&gt; buries the floor. &lt;&lt;if $cityvars.hurryup == false&gt;&gt;Bar &lt;&lt;tlink &quot;patrons&quot;&gt;&gt; laugh and jostle each other on their stools, tipping &lt;&lt;tlink &quot;drinks&quot;&gt;&gt; into mouths dried from endless &lt;&lt;tlink &quot;chatter&quot;&gt;&gt;.&lt;&lt;else&gt;&gt;There are a few unfinished &lt;&lt;tlink &quot;drinks&quot;&gt;&gt; left on the bar.&lt;&lt;/if&gt;&gt; Outside on the &lt;&lt;tlink &quot;street&quot;&gt;&gt;, the cooling &lt;&lt;tlink &quot;evening&quot;&gt;&gt; awaits.</tw-passagedata><tw-passagedata pid="2" name="sawdust" tags="bar" position="225,100" size="100,100">This &lt;&lt;tlink &quot;bar&quot;&gt;&gt; isn’t the classiest place, as proven by the heavily trampled sawdust. Tracked footprints that reveal the wooden floor beneath are ghost-like signs of &lt;&lt;if $cityvars.hurryup== false&gt;&gt;the &lt;&lt;tlink &quot;patrons&quot; &quot;patrons’&quot;&gt;&gt;\&lt;&lt;else&gt;&gt;past patrons’&lt;&lt;/if&gt;&gt; presence, but they’re quickly exorcised by the shoes of harried waiters. The fragments of &lt;&lt;tlink &quot;oyster&quot;&gt;&gt; shells, stains left by spilled &lt;&lt;tlink &quot;drinks&quot;&gt;&gt; and more lie embedded in the sifting dust.</tw-passagedata><tw-passagedata pid="3" name="oyster" tags="bar" position="350,100" size="100,100">The &lt;&lt;tlink &quot;bar&quot;&gt;&gt; has oysters on ice in a display case, their shells gaping as if surprised at where they’ve ended up. A strong briny smell, which is released as each oyster is cracked open, soaks into the walls and &lt;&lt;tlink &quot;sawdust&quot;&gt;&gt; floor.</tw-passagedata><tw-passagedata pid="4" name="drinks" tags="bar" position="475,100" size="100,100">&lt;&lt;if $cityvars.hurryup == false&gt;&gt;Cocktails and beer are being served to various &lt;&lt;tlink &quot;patrons&quot;&gt;&gt;. Some have already baptized the &lt;&lt;tlink &quot;sawdust&quot;&gt;&gt; with their sloshing, less-than-holy spirits.&lt;&lt;else&gt;&gt;The stains of less-than-holy spirits seep into the &lt;&lt;tlink &quot;sawdust&quot;&gt;&gt;.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="chatter" tags="bar" position="600,100" size="100,100">&lt;&lt;set $cityvars.hurryup = true&gt;&gt;\
 At the &lt;&lt;tlink &quot;bar&quot;&gt;&gt;, a lady is loudly and animatedly acting out the conversation she had with her friend about another conversation. Some of the people around her nearly slip off their barstools as they lean in to listen. @@.delayed;“When Lil’s husband got demobbed, I said—I didn’t mince my words, I said to her myself,@@
 
 @@.delayed;“‘Now Albert’s coming back, make yourself a bit smart. He’ll want to know what you done with that money he gave you to get yourself some teeth.’”@@
