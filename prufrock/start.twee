@@ -1,7 +1,10 @@
 :: Start [start notimer]
-<<set $reversePassages = ['Start']>>\
-<<set $reverse = false>>\
+<<silently>>
+<<set $reversePassages = ['Start']>>
+<<set $reverse = false>>
+<</silently>>\
 <<if visited() == 1>>\
+<<set $speed = 60>>
 Let me reverse the clocks, the hours in
 which I die a million times and a
 million ways in a single minute,
@@ -43,11 +46,15 @@ mistake can lead to ends that @@.endwords;will@@
 undo me. Let me do them in @@.endwords;reverse.@@
 <<timed 9s t8n>>
 [[Revise. | city]]
-[[Credits]]
-<<next 50ms>>
+[[Credits]]\
+<<next 50ms>>\
 /* scrolls down to the bottom to show the revise and credits */
+<<run $('.passage > *:last-child').get(0).scrollIntoView({behavior: 'smooth'})>>\
+<<next 5s>>
+<<adjustTimer>>
+<<next 50ms>>
 <<run $('.passage > *:last-child').get(0).scrollIntoView({behavior: 'smooth'})>>
-<</timed>>
+<</timed>>\
 <<elseif visited() >= 3>>\
 <<set $reverse = false>>\
 Let me reverse the clocks, the hours ''in''
@@ -72,12 +79,13 @@ undo me. Let me do them in ''reverse''.
 
 [[Revise. | city]]
 [[Credits]]
+
+<<adjustTimer>>
 <</if>>
 
 :: reverse [notimer nobr]
 <<silently>>
 <<set $reverse = true>>
-<<set $reversedBefore = true>>
 <<set _backward = $reversePassages.pop()>>
 <</silently>>
 @@#reverse;[[Reverse. | _backward]]@@
@@ -99,4 +107,6 @@ Thank you to my bug testers: Josh Grams, Austin Auclair, and B. Murchhona!
 
 This is version 1 of a bigger game that will have seven places to explore, which I'll release ~someday!
 
-[[Revise. | city][$places.city = false]]
+[[Revise. | city]]
+
+<<adjustTimer>>

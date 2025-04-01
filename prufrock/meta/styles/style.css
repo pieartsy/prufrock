@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: "Gentium Book Plus";
+    src:
+      local("Gentium_Book_Plus"),
+      url(Gentium_Book_Plus/GentiumBookPlus-Regular.ttf) format("truetype"),
+      url(Gentium_Book_Plus/GentiumBookPlus-Bold.ttf) format("truetype"),
+      url(Gentium_Book_Plus/GentiumBookPlus-Italic.ttf) format("truetype"),
+      url(Gentium_Book_Plus/GentiumBookPlus-BoldItalic.ttf) format("truetype"),
+  }
+
+html {
+      font-family: 'Gentium Book Plus', 'Garamond', 'Times New Roman', serif;
+      font-size: 25px;
+  }
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    padding-bottom: 20px;
+    opacity: 65%;
+    margin: 10px;
+  }
+
+#passages {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 40em;
+    height: 50vh;
+}
+
+.passage {
+    position: relative;
+    margin: auto;
+    padding-bottom: 2.5em;
+}
+
+a {
+    font-weight: bolder;
+}
+
+a.link-broken {
+    color: red;
+}
+
+a.link-visited {
+    font-style: italic;
+}
+
+/* delayed text */
+.delayed {
+    opacity: 0;
+}
+
+/* bigger reverse button */
+#reverse {
+    font-size: 20vh;
+}
+
+/* stop listening to dialogue */
+.stop {
+    position: relative;
+    bottom: 0;
+}
+
+/* start passage poem */
+/* start passage */
+body.start,
+body.meta {
+    background-color: #e9ddd2;
+    color: #100808;
+}
+
+.passage.start a,
+.passage.meta a {
+    color: #bd0b0b;
+}
+
+.endwords {
+    transition: all 2s linear;
+}
+
+.bold {
+    text-shadow: 0 0 5px black;
+    transition: 0.6s;
+}

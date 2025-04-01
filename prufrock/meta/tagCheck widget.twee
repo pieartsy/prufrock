@@ -1,0 +1,12 @@
+:: tagCheck [widget nobr]
+<<widget "tagCheck">>
+<<set $cityPassages = Story.lookup('tags', $args[0])>>
+     <<for _passage range $cityPassages>>
+        <<if !hasVisited(_passage.title)>>
+            <<set _check = false>>
+            <<break>>
+        <<else>>
+            <<set _check = true>>
+        <</if>>
+    <</for>>
+<</widget>>

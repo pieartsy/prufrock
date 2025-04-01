@@ -1,0 +1,11 @@
+:: time adjust [widget nobr]
+<<widget "adjustTimer">>
+    <<linkappend "I need more time. //(accessibility)//" t8n>><br>
+    <<cycle "$speed" autoselect>>
+        <<option "...Please. //(two minutes)//" 120>>
+        <<option "Even more. //(three minutes)//" 180>>
+        <<option "Please, more. //(five minutes)//" 300>>
+        <<option "No, no...nevermind. //(one minute)//" 60>>
+    <</cycle>>
+    <</linkappend>>
+<</widget>>

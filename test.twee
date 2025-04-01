@@ -103,8 +103,7 @@ Thank you to my bug testers: Josh Grams, Austin Auclair, and B. Murchhona!
 
 This is version 1 of a bigger game that will have seven places to explore, which I'll release ~someday!
 
-[[Revise. | city][$places.city = false]]
-
+[[Revise. | city]]
 
 
 
@@ -172,10 +171,10 @@ The one-eyed <<tlink "merchant" "merchant's">> pockets are stuffed with somethin
 This man is nodding along and shrugging during the <<tlink "conversation">>, or monologue, but otherwise says nothing. He looks elderly, with a pointed white beard and a black, wide-brimmed hat upon his head. He grips the <<tlink "dog" "dog's">> leash tightly in one gloved fist. Occasionally he looks up at the darkening <<tlink "evening">>, gestures to his watch, and attempts to leave, but the <<tlink "merchant">> pulls him back.
 
 :: dog [city]
-An incredibly small yorkshire terrier leashed by the <<tlink "man with a hat">>. Its expression is doleful and dour, which contrasts in an amusing manner with the bow on its head. Whenever a small item slips from the <<tlink "pockets">> of the one-eyed <<tlink "merchant">>, the dog quickly licks it up.
+An incredibly small Yorkshire terrier leashed by the <<tlink "man with a hat">>. Its expression is doleful and dour, which contrasts in an amusing manner with the bow on its head. Whenever a small item slips from the <<tlink "pockets">> of the one-eyed <<tlink "merchant">>, the dog quickly licks it up.
 
 :: conversation [city]
-You can hear the conversation progressing on the other side of the <<tlink "street">>. "Stetson! You who were with me in the ships at Mylae!" @@.delayed;The one-eyed man's accent seems to be from somewhere in the Greek isles-- though it doesn't sound modern to my ears--with a touch of French. "That corpse you planted last year in your garden,@@ @@.delayed;has it begun to sprout? Will it bloom this year? Or has the sudden frost disturbed its bed?"@@
+You can hear the conversation progressing on the other side of the <<tlink "street">>. "Stetson! You who were with me in the ships at Mylae!" @@.delayed;The one-eyed man's accent seems to be from somewhere in the Greek isles--though it doesn't sound modern to my ears--with a touch of French. "That corpse you planted last year in your garden,@@ @@.delayed;has it begun to sprout? Will it bloom this year? Or has the sudden frost disturbed its bed?"@@
 
 @@.delayed;The dog begins to yap and growl at this, until Stetson has to pull him back.
 
@@ -224,9 +223,9 @@ At the <<tlink "bar">>, a lady is loudly and animatedly acting out the conversat
 
 "'And no more can't I', I said, @@ @@.delayed;'and think of poor Albert! He's been in the army four years, he wants a good time, and if you don't give it him, there's others will', I said."@@
 
-@@.delayed;The woman preens as the surrounding people murmer in agreement. Her voice pitches up, breathy and shrill: "'Oh is there?' she said.@@
+@@.delayed;The woman preens as the surrounding people murmur in agreement. Her voice pitches up, breathy and shrill: "'Oh is there?' she said.@@
 
-@@.delayed;"'Something o'that,' I said.
+@@.delayed;"'Something o' that,' I said.
 
 "'Then I'll know who to thank,' she said, and gave me a straight look."@@
 
@@ -278,10 +277,10 @@ There's been a valiant attempt to make the lobby look presentable for new guests
 There seems to be a <<tlink "commotion">> of sorts down the hall where the hotel rooms lie. The dusky <<tlink "evening">> awaits our return to the <<tlink "street" "streets">>.
 
 :: walls [hotel]
-The paint on the <<tlink "hotel">> walls is peeling down in hangnail strips and the brick behind is wet for whatever reason. The few places the once-whitewash still covers are cracked and flaking like parched skin ready to break.
+The smoke-stained paint on the <<tlink "hotel">> walls is peeling down in hangnail strips and the brick behind is wet for whatever reason. The few places the once-whitewash still covers are cracked and flaking like parched skin ready to break. Periodic thumps from the <<tlink "commotion">> shudder more flecks into the air.
 
 :: cigarettes [hotel]
-Stubby worms of cigarettes  in various states of flatness are scattered on top of the <<tlink "carpet">>. Since the ashtray on the <<tlink "counter">> is already brimming with ash, there aren't many other places in the <<tlink "hotel">> lobby to discard them.
+Stubby worms of cigarettes in various states of flatness are scattered on top of the <<tlink "carpet">>. Since the ashtray on the <<tlink "counter">> is already brimming with ash, there aren't many other places in the <<tlink "hotel">> lobby to discard them.
 
 :: carpet [hotel]
 The <<tlink "cigarettes">> are resting atop the carpet that poorly blankets the <<tlink "hotel">> floors, rather than nestling within its threads. This would be curious if the carpet were not completely hardened from various spills and stains, but it is, so the phenomenon is quite understandable.
@@ -355,6 +354,37 @@ $(document).on(':passagerender', function (ev) {
 	}
 });
 
+/* hasVisitedTags checks whether all passages with relevant tags occurred in story history */
+/* <<if hasVisitedTags("forest", "plains")>> */
+
+window.hasVisitedTags = function (/* variadic */) {
+    var tags = Array.from(arguments).flat(Infinity);
+
+    for (var i = 0; i < tags.length; ++i) {
+        var passages = Story.lookup('tags', tags[i]);
+
+        for (var j = 0; j < passages.length; ++j) {
+            if (!hasVisited(passages[j].title)) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+};
+
+:: tagcheck [widget nobr]
+<<widget "tagcheck">>
+<<set $cityPassages = Story.lookup('tags', $args[0])>>
+     <<for _passage range $cityPassages>>
+        <<if !hasVisited(_passage.title)>>
+            <<set _check = false>>
+            <<break>>
+        <<else>>
+            <<set _check = true>>
+        <</if>>
+    <</for>>
+<</widget>>
 
 :: style [stylesheet]
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;1,400;1,700&display=swap');
@@ -543,8 +573,6 @@ html, body {
 :: reverse [notimer nobr]
 <<silently>>
 <<set $reverse = true>>
-<<set $reversedBefore = true>>
-<<set $places.city = true>>
 <<set _backward = $reversePassages.pop()>>
 <</silently>>
 @@#reverse;[[Reverse. | _backward]]@@

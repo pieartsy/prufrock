@@ -1,0 +1,60 @@
+/*===CITY===*/
+
+body.city,
+body.citystart {
+    background-color: rgb(52, 33, 52);
+    color: rgb(255, 255, 215);
+}
+
+body.citystart .timer,
+body.city .timer {
+    color:hsla(60, 100%, 92%, 0.25)
+}
+
+.passage.city a,
+.passage.citystart a {
+    color: yellow;
+}
+
+.passage.city a.link-visited,
+.passage.citystart a.link-visited {
+    color: rgb(222, 148, 12);
+}
+
+/* bar */
+
+body.bar {
+    background-color: rgb(199, 165, 154);
+    color: rgb(4, 3, 3);
+}
+
+body.bar .timer {
+    color:hsla(0, 26%, 30%, 0.419)
+}
+
+.passage.bar a {
+    color: rgb(111, 37, 0);
+}
+
+.passage.bar a.link-visited {
+    color: rgb(116, 2, 74);
+}
+
+/* hotel */
+
+body.hotel {
+    background-color: rgb(100, 38, 60);
+    color: rgb(229, 228, 228);
+}
+
+.passage.hotel a {
+    color: rgb(240, 88, 192);
+}
+
+.passage.hotel a.link-visited {
+    color: rgb(198, 118, 222);
+}
+
+body.hotel .timer {
+    color:rgba(167, 132, 132, 0.482);
+}
