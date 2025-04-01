@@ -1,37 +1,37 @@
 @font-face {
+  font-family: 'Gentium Book Plus';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Gentium Book Plus"),
+    url(../Gentium_Book_Plus/GentiumBookPlus-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gentium Book Plus';
+  font-style: italic;
+  font-weight: 400;
+  src: 
+    local("Gentium Book Plus Italic"),
+    url(../Gentium_Book_Plus/GentiumBookPlus-Italic.ttf) format('truetype');
+}
+
+@font-face {
     font-family: "Gentium Book Plus";
-    src:
-      local("Gentium Book Plus"),
-      url(Gentium_Book_Plus/GentiumBookPlus-Regular.ttf) format("truetype");
     font-style: normal;
-    font-weight: normal;
+    font-weight: 700;
+    src:
+      local("Gentium Book Plus Bold"),
+      url(Gentium_Book_Plus\GentiumBookPlus-Bold.ttf) format("truetype");
   }
 
 @font-face {
     font-family: "Gentium Book Plus";
-    src:
-      local("Gentium Book Plus"),
-      url(Gentium_Book_Plus/GentiumBookPlus-Italic.ttf) format("truetype");
     font-style: italic;
-    font-weight: normal;
-  }
-
-@font-face {
-    font-family: "Gentium Book Plus";
+    font-weight: 700;
     src:
-      local("Gentium Book Plus"),
-      url(Gentium_Book_Plus/GentiumBookPlus-Bold.ttf) format("truetype");
-    font-style: normal;
-    font-weight: bolder;
-  }
-
-@font-face {
-    font-family: "Gentium Book Plus";
-    src:
-      local("Gentium Book Plus"),
-      url(Gentium_Book_Plus/GentiumBookPlus-BoldItalic.ttf) format("truetype");
-    font-style: italic;
-    font-weight: bolder;
+      local("Gentium Book Plus Bold Italic"), 
+      url(Gentium_Book_Plus\GentiumBookPlus-BoldItalic.ttf) format("truetype");
   }
 
 html {
