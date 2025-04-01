@@ -1,13 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;1,400;1,700&display=swap');
+@font-face {
+    font-family: "Gentium Book Plus";
+    src:
+      local("Gentium Book Plus"),
+      url(Gentium_Book_Plus/GentiumBookPlus-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
 
 @font-face {
     font-family: "Gentium Book Plus";
     src:
-      local("Gentium_Book_Plus"),
-      url(Gentium_Book_Plus/GentiumBookPlus-Regular.ttf) format("truetype"),
-      url(Gentium_Book_Plus/GentiumBookPlus-Bold.ttf) format("truetype"),
-      url(Gentium_Book_Plus/GentiumBookPlus-Italic.ttf) format("truetype"),
-      url(Gentium_Book_Plus/GentiumBookPlus-BoldItalic.ttf) format("truetype"),
+      local("Gentium Book Plus"),
+      url(Gentium_Book_Plus/GentiumBookPlus-Italic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: normal;
+  }
+
+@font-face {
+    font-family: "Gentium Book Plus";
+    src:
+      local("Gentium Book Plus"),
+      url(Gentium_Book_Plus/GentiumBookPlus-Bold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: bolder;
+  }
+
+@font-face {
+    font-family: "Gentium Book Plus";
+    src:
+      local("Gentium Book Plus"),
+      url(Gentium_Book_Plus/GentiumBookPlus-BoldItalic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: bolder;
   }
 
 html {
